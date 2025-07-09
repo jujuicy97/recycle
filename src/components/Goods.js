@@ -9,7 +9,7 @@ const Goods = () => {
         <button>상품 페이지 바로가기 ＞</button>
       </div>
       <div className="img-wrap">
-        <img src="/images/goods-main-01.jpg" alt="제로 플로우 굿즈배너 메인 이미지" />
+        <img src="/images/main/goods-main-01.jpg" alt="제로 플로우 굿즈배너 메인 이미지" />
       </div>
     </div>
   );
