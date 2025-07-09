@@ -13,22 +13,27 @@ const Header = () => {
 
   return (
     <header>
+      <Menu isOpen={isOpen} className="menu" />
+      {isOpen && (
+        <div className="dimmed-bg" onClick={() => setIsOpen(false)}></div>
+      )}
       <div className="head">
-        <IoMdMenu
-          className="menu-btn"
-          style={style}
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        />
-        <img
-          onClick={() => {
-            navigate("/");
-          }}
-          src={`${process.env.PUBLIC_URL}/images/logo-01.png`}
-          alt="zero-flow 초록 색상 로고"
-        />
-        <Menu isOpen={isOpen} />
+        <div className="left">
+          <IoMdMenu
+            className="menu-btn"
+            style={style}
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          />
+          <img
+            onClick={() => {
+              navigate("/");
+            }}
+            src={`${process.env.PUBLIC_URL}/images/logo-01.png`}
+            alt="zero-flow 초록 색상 로고"
+          />
+        </div>
         <div
           className="cart"
           onClick={() => {
