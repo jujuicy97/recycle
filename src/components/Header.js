@@ -1,9 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Menu from "./Menu";
 import { IoMdMenu } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
-
 import logo1 from "../images/logo-01.png";
 
 const Header = () => {
@@ -12,7 +11,16 @@ const Header = () => {
   const style = {
     cursor: "pointer",
   };
-
+  // 데스크탑 사이즈면 자동으로 메뉴 닫기
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1048) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <header>
       <Menu isOpen={isOpen} className="menu" />
