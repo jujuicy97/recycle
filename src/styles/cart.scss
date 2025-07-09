@@ -1,17 +1,18 @@
-.cart {
+.cart-page {
+  height: 100vh;
+  padding: 1rem;
+  border: 1px solid tomato;
   overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 2rem 0;
+  transition: all 0.3s;
+  @include desktop{
+    margin: 0 10rem;
+  }
   h2 {
     margin: 2rem;
     text-align: left;
-    @include tablet {
-      text-align: left;
-    }
-    @include desktop {
-      text-align: center;
-    }
   }
   ul {
     li {
@@ -62,11 +63,6 @@
     margin: 1rem 0;
   }
   button {
-    border: none;
-    outline: none;
-    padding: 1rem 3rem;
-    font-size: 1.3rem;
-    background-color: var(--color-sub1);
-    color: var(--color-sub2);
+    @include btn-style();
   }
 }
