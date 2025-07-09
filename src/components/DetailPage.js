@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import selectItem from '../assets/new-items.json';
+import DetailPage_Keyword from "./DetailPage_Keyword";
+import UsageGuide from "./UsageGuide";import selectItem from '../assets/new-items.json';
 import { MdOutlineStar } from "react-icons/md";
 import { GoShareAndroid } from "react-icons/go";
 import { CiCircleInfo } from "react-icons/ci";

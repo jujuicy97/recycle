@@ -1,86 +1,98 @@
 [
   {
     "id": "item001",
-    "image": "/images/new-items/new-item-01-1.jpg",
-    "title": "업사이클링 재생지 감성 노트",
+    "image": "/images/new-items/new-items/new-item-01-1.jpg",
+    "title": "재생지 감성 노트",
     "price": 8000,
-    "available": true
+    "available": true,
+    "type": "UPCYCLE"
   },
   {
     "id": "item002",
-    "image": "/images/new-items/new-item-02-1.jpeg",
-    "title": "업사이클링 플라스틱 꽃잎 키링",
+    "image": "/images/new-items/new-items/new-item-02-1.jpeg",
+    "title": "플라스틱 꽃잎 키링",
     "price": 12000,
-    "available": true
+    "available": true,
+    "type": "UPCYCLE"
   },
   {
     "id": "item003",
-    "image": "/images/new-items/new-item-03-1.jpg",
-    "title": "업사이클링 폐목재 컵받침 세트",
+    "image": "/images/new-items/new-items/new-item-03-1.jpg",
+    "title": "폐목재 컵받침 세트",
     "price": 15000,
-    "available": true
+    "available": true,
+    "type": "UPCYCLE"
   },
   {
     "id": "item004",
-    "image": "/images/new-items/new-item-04-1.jpg",
-    "title": "제로웨이스트 숲속 비누 샴푸바",
+    "image": "/images/new-items/new-items/new-item-04-1.jpg",
+    "title": "숲속 비누 샴푸바",
     "price": 15000,
-    "available": true
+    "available": true,
+    "type": "ZERO"
   },
   {
     "id": "item005",
-    "image": "/images/new-items/new-item-05-1.jpg",
-    "title": "리유저블 늘 쓰는 스텐 빨대 세트",
+    "image": "/images/new-items/new-items/new-item-05-1.jpg",
+    "title": "늘 쓰는 스텐 빨대 세트",
     "price": 11000,
-    "available": true
+    "available": true,
+    "type": "REUSABLE"
   },
   {
     "id": "item006",
-    "image": "../images/new-items/new-item-06-1.jpg",
-    "title": "제로웨이스트 숨 쉬는 대나무 칫솔",
+    "image": "../images/new-items/new-items/new-item-06-1.jpg",
+    "title": "숨 쉬는 대나무 칫솔",
     "price": 6500,
-    "available": true
+    "available": true,
+    "type": "ZERO"
   },
   {
     "id": "item007",
-    "image": "/images/new-items/new-item-01-2.jpg",
-    "title": "업사이클링 재생지 감성 노트",
+    "image": "/images/new-items/new-items/new-item-01-2.jpg",
+    "title": "재생지 감성 노트",
     "price": 8000,
-    "available": true
+    "available": true,
+    "type": "UPCYCLE"
   },
   {
     "id": "item008",
-    "image": "/images/new-items/new-item-02-2.jpeg",
-    "title": "업사이클링 플라스틱 꽃잎 키링",
+    "image": "/images/new-items/new-items/new-item-02-2.jpeg",
+    "title": "플라스틱 꽃잎 키링",
     "price": 12000,
-    "available": true
+    "available": true,
+    "type": "UPCYCLE"
   },
   {
     "id": "item009",
-    "image": "/images/new-items/new-item-03-2.jpg",
-    "title": "업사이클링 폐목재 컵받침 세트",
+    "image": "/images/new-items/new-items/new-item-03-2.jpg",
+    "title": "폐목재 컵받침 세트",
     "price": 15000,
-    "available": true
+    "available": true,
+    "type": "UPCYCLE"
   },
   {
     "id": "item010",
-    "image": "/images/new-items/new-item-04-2.jpg",
-    "title": "제로웨이스트 숲속 비누 샴푸바",
+    "image": "/images/new-items/new-items/new-item-04-2.jpg",
+    "title": "숲속 비누 샴푸바",
     "price": 15000,
-    "available": true
+    "available": true,
+    "type": "ZERO"
   },
   {
     "id": "item011",
-    "image": "/images/new-items/new-item-05-2.jpg",
-    "title": "리유저블 늘 쓰는 스텐 빨대 세트",
+    "image": "/images/new-items/new-items/new-item-05-2.jpg",
+    "title": "늘 쓰는 스텐 빨대 세트",
     "price": 11000,
-    "available": true
+    "available": true,
+    "type": "REUSABLE"
   },
   {
     "id": "item012",
-    "image": "/images/new-items/new-item-06-2.jpg",
-    "title": "제로웨이스트 숨 쉬는 대나무 칫솔",
+    "image": "/images/new-items/new-items/new-item-06-2.jpg",
+    "title": "숨 쉬는 대나무 칫솔",
     "price": 6500,
-    "available": true
+    "available": true,
+    "type": "ZERO"
   }
 ]
