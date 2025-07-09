@@ -6,7 +6,7 @@ const DetailPage = () => {
   return (
     <div>
       <h2>상품 상세페이지</h2>
-      <p>상품 ID : {id}</p>
+      <p>상품의 ID : {id}</p>
     </div>
   );
 };

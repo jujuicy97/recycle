@@ -2,7 +2,7 @@ const BrandIntro = () => {
   return (
     <div className="brandintro">
       <div className="brand-wrap">
-        <img src="../images/logo.png" />
+        <img src="/images/logo-01.png" />
         <div className="bar"></div>
         <div className="txt">
           <h3>
