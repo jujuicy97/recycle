@@ -13,8 +13,8 @@ import Cart from "./components/Cart";
 
 
 const App = () => {
-  const [cart, setCart] = useState([]);
   //장바구니에 리스트 추가
+  const [cart, setCart] = useState([]);
   //카트에 id가 있는지 없는지 체크 -> id가 있으면 count 값을 1개 증가 / id가 없으면 count:1로 설정
   const handleAddToCart = (item) => {
     setCart((prev) => {
