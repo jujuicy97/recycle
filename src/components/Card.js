@@ -21,7 +21,7 @@ const Card = ({item,isHover,onAdd}) => {
   const getImageSrc = ()=>{
     if (!image) return "";
     const src = checkHover ? image.replace("-1", "-2") : image;
-    console.log("이미지경로:",src);
+    // console.log("이미지경로:",src);
     return src;
   };
 

@@ -4,10 +4,10 @@ import BrandIntro from "./components/BrandIntro";
 import CardList from "./components/CardList";
 import Goods from "./components/Goods";
 import Project from "./components/Project";
-import ScrollBtn from "./components/ScrollBtn";
 import Main from "./components/Main";
 import DetailPage from "./components/DetailPage";
 import Banner from "./components/Banner";
+import SlideCarousel from "./components/SlideCarousel";
 
 
 const App = () => {
@@ -22,9 +22,9 @@ const App = () => {
                 <Banner/>
                 <BrandIntro/>
                 <Goods/>
+                <SlideCarousel/>
                 <CardList/>
                 <Project />
-                <ScrollBtn />
               </>
             }
           />
