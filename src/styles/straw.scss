@@ -47,20 +47,19 @@ $font-small: 1rem;
   background-color: #f0e7d9;
   color: var(--color-maintxt);
   .product-info {
-    margin: 2rem 0;
+    margin: 3rem 0;
     text-align: left;
-    padding: 2rem;
     h2 {
-      font-family: 'GongGothicMedium';
+      font-family: "GongGothicMedium";
       font-size: 1.8rem;
       font-weight: 300;
       margin-bottom: 0.5rem;
       color: var(--color-black);
     }
     .short-desc {
-      font-size: 1.1rem;
-      color: #5c5c5c;
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.3;
+      margin: 1rem 0;
     }
     .feature-list {
       margin-bottom: 1.5rem;
@@ -82,23 +81,25 @@ $font-small: 1rem;
     }
   }
   .product-image {
+    background-color: #c0c0c0;
+    @include flex-layout(column, center, center);
+    gap: 2rem;
     text-align: center;
+    min-height: 600px;
+    color: var(--color-black);
+    padding: 2rem;
     img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
+      max-width: 80%;
     }
   }
   .product-gallery {
     margin-top: 2rem;
     img {
       width: 100%;
-      border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     }
   }
 }
-
 
 /*
   max-width: 50vw;
