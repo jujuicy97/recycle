@@ -6,6 +6,7 @@ const Card = ({item,isHover,onAdd}) => {
   const {title,price,image,type} = item;
   const [checkHover,setCheckHover] = useState(false);
   const [showMsg,setShowMsg] = useState(false);
+   console.log("카드 type 값:", type);
 
 //상세페이지로 이동
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Card = ({item,isHover,onAdd}) => {
   const getImageSrc = ()=>{
     if (!image) return "";
     const src = checkHover ? image.replace("-1", "-2") : image;
-    console.log("이미지경로:",src);
+    // console.log("이미지경로:",src);
     return src;
   };
 
@@ -46,6 +47,7 @@ const Card = ({item,isHover,onAdd}) => {
             type === "REUSABLE" ? "REUSABLE" : 
             ""
             }
+
         </p>
       )
     }
