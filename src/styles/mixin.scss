@@ -78,10 +78,10 @@
 }
 
 // 해쉬태그 컴포넌트
-@mixin hashtag-style($bg:var(--color-sub1)){
-  color: var(--color-sub2);
+@mixin hashtag-style($bg:var(--color-Secondary)){
+  color: var(--color-subtxt);
   background-color: $bg;
-  border: 1px solid var(--color-sub2);
+  border: 1px solid var(--color-subtxt);
   border-radius: 5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;

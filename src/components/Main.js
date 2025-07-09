@@ -9,7 +9,6 @@ const Main = () => {
   return (
     <>
       <header>
-        <h1>공통 메뉴바 자리</h1>
         {/* 실제 메뉴 컴포넌트나 네비게이션 바 삽입 */}
         <Header/>
       </header>
