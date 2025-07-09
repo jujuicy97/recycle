@@ -1,11 +1,9 @@
-import bgImg from "../images/brand-main-01.jpg";
-import logo2 from "../images/logo-02.png";
 
 const Banner = () => {
   return (
     <div id="banner">
       <div className="bg-img">
-        <img src={bgImg} alt="zero flow 나뭇잎 배경" />
+        <img src={`${process.env.PUBLIC_URL}/images/brand-main-01.jpg`} alt="zero flow 나뭇잎 배경" />
       </div>
       <div className="story">
         <div className="story-zero">
@@ -20,7 +18,7 @@ const Banner = () => {
         </div>
         <div className="story-img">
           <img
-            src={logo2}
+            src={`${process.env.PUBLIC_URL}/images/logo-02.png`}
             alt="zero flow 베이지 색상 로고"
             //배경때문에 색이 안보여서 임의로 색 바꿔서 넣음
           />

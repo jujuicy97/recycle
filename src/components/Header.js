@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Menu from "./Menu";
 import { IoMdMenu } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
-import logo1 from "../images/logo-01.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +39,7 @@ const Header = () => {
             onClick={() => {
               navigate("/");
             }}
-            src={logo1}
+            src={`${process.env.PUBLIC_URL}/images/logo-01.png`}
             alt="zero flow 초록 색상 로고"
           />
         </div>
