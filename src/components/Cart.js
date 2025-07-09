@@ -28,7 +28,7 @@ const Cart = ({ cart, onDelete }) => {
               return (
                 <li>
                   <img
-                    src={`${process.env.PUBLIC_URL}/images/new/${item.filename}`}
+                    src={`${process.env.PUBLIC_URL}/images/new-items/${item.filename}`}
                     alt={item.title}
                   />
                   <div className="item-info">
@@ -51,7 +51,7 @@ const Cart = ({ cart, onDelete }) => {
           <div className="cart-summary">
             <div className="summary-price">
               <p>총 결제 금액 : </p>
-              <h3>{totalPrice}</h3>
+              <h3>{totalPrice} 원</h3>
             </div>
             <button>주문하기</button>
           </div>
