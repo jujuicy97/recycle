@@ -1,0 +1,90 @@
+//정렬
+@mixin flex-layout($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//반응형 믹스인 (기본형은 모바일로 가져갈거야)
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+//card 버튼 컴포넌트
+@mixin btn-style($bg:var(--color-Secondary)){
+  background-color: $bg;
+  padding: 0.5rem 1rem;
+  // border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  color: var(--color-subtxt);
+}
+
+//brandintro 반응형 
+@mixin big-layout-style {
+  text-align: left;
+
+  .brand-wrap {
+    @include flex-layout(row, center, center);
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+  }
+
+  img {
+    width: 300px;
+    margin-right: 2rem;
+  }
+
+  .txt {
+    width: auto;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    font-weight: 300;
+  }
+
+  .bar {
+    display: block;
+    height: 80%;
+  }
+}
+
+
+// goods, project 버튼 컴포넌트 -> 확인하기
+@mixin banner-btn {
+  margin-top: 1.5rem;
+  width: 200px;
+  padding: 8px 16px;
+  border-radius: 0;
+  border: 1px solid var(--color-maintxt);
+  background-color: transparent;
+  color: var(--color-maintxt);
+  // @include font-body; // 폰트 믹스인 확인후 수정해야 함
+  &:hover {
+    background-color: var(--color-Hover);
+    color: var(--color-subtxt);
+  }
+}
+
+// 해쉬태그 컴포넌트
+@mixin hashtag-style($bg:var(--color-sub1)){
+  color: var(--color-sub2);
+  background-color: $bg;
+  border: 1px solid var(--color-sub2);
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+

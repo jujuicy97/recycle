@@ -1,0 +1,62 @@
+.card-list{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0 1.5rem;
+  @include tablet{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include desktop{
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 6rem;
+  }
+}
+
+.card{
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  &-img{
+    width: 100%;
+  }
+  &-btn{
+    display: inline-block;
+    @include btn-style();
+    background-color: rgba(255,255,255,0.7);
+    color: var(--color-black);
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-family: 'WantedSans', sans-serif;
+  }
+  &-title{
+    font-family: 'GongGothicMedium';
+    font-weight: 300;
+    margin: 0.5rem 0;
+  }
+  &-price{
+    color: var((--color-primary));
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+  &-add{
+    @include btn-style(var(--color-Secondary));
+    &:hover{
+      filter: brightness(80%);
+    }
+  }
+  .card-img{
+    cursor: pointer;
+  }
+  .popup-msg{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,0.7);
+    color: var(--color-subtxt);
+  }
+}

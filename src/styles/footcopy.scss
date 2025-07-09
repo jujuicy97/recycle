@@ -1,0 +1,71 @@
+footer {
+  color: var(--color-subtxt);
+  background-color: var(--color-Secondary);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three";
+  gap: 1rem;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "one two"
+      "three three";
+  }
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "one two"
+      "three three";
+  }
+  gap: 5rem;
+  h2 {
+    width: 100%;
+    text-align: left;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-subtxt);
+  }
+  .footer-one {
+    grid-area: one;
+    @include tablet {
+      @include flex-layout(column, flex-start, flex-start);
+    }
+    ul {
+      margin: 1rem 0;
+      li {
+        padding: 0.4rem 0;
+        cursor: pointer;
+      }
+    }
+  }
+  .footer-two {
+    grid-area: two;
+    ul {
+      margin: 0.5rem 0;
+      li {
+        display: inline-block;
+        padding-right: 1rem;
+        margin: 0.5rem 0;
+        // @include font-sub;
+        cursor: pointer;
+      }
+    }
+  }
+  .footer-three {
+    grid-area: three;
+    text-align: left;
+    margin-bottom: 1rem;
+    @include tablet {
+      width: 60%;
+      margin-bottom: 1rem;
+    }
+    @include desktop {
+      width: 100%;
+      margin-bottom: 1rem;
+      @include flex-layout();
+    }
+  }
+}

@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BrandIntro from "./components/BrandIntro";
+import CardList from "./components/CardList";
+import Goods from "./components/Goods";
+import Project from "./components/Project";
+import ScrollBtn from "./components/ScrollBtn";
+import Main from "./components/Main";
+import DetailPage from "./components/DetailPage";
+import Banner from "./components/Banner";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />}>
+          <Route
+            index
+            element={
+              <>
+                <Banner/>
+                <BrandIntro/>
+                <Goods/>
+                <CardList/>
+                <Project />
+                <ScrollBtn />
+              </>
+            }
+          />
+          <Route path="/detail/:id" element={<DetailPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
