@@ -1,19 +1,20 @@
 #banner {
   position: relative;
-  @include tablet {
-    height: 70vh;
-  }
+  height: 70vh;
   @include desktop {
     @include flex-layout(row, center, center);
-    width: 90%;
+    margin: 0 10%;
   }
   .bg-img {
     position: relative;
+    text-align: center;
     width: 100%;
     height: 100%;
     @include desktop {
-      width: 50%;
-      left: 50%;
+      position: absolute;
+      height: 90%;
+      width: 60%;
+      left: 40%;
     }
     img {
       width: 100%;
@@ -37,68 +38,86 @@
       z-index: 1;
     }
   }
-  .ment {
+  .story {
     position: absolute;
     top: 50%;
-    transform: translateY(-30%);
+    transform: translateY(-40%);
     z-index: 2;
     width: 100%;
     height: 100%;
     color: #e5e2da;
     @include flex-layout(column, flex-start, center);
-    gap: 5rem;
+    gap: 4rem;
     text-align: center;
     padding: 2rem;
-    .ment-two {
+    h1 {
+      font-size: 3rem;
+    }
+    .story-zero,
+    .story-two {
       display: none;
     }
+    
     @include tablet {
-      @include flex-layout(column-reverse, center, center);
-      top: 50%;
-      transform: translateY(-50%);
-      .ment-two {
+      @include flex-layout(column, center, center);
+      gap: 1.5rem;
+      top: 30%;
+      transform: translateY(-40%);
+      .story-zero,
+      .story-one {
         display: flex;
       }
-      .ment-one {
+      .story-two {
         display: none;
       }
     }
     @include desktop {
-      position: relative;
-      left: 10%;
-      width: 50%;
-      height: 60vh;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 40%;
+      min-width: 400px;
+      height: 50vh;
       color: var(--main-font);
-      @include flex-layout(column-reverse, space-around, center);
-      .ment-two {
+      @include flex-layout(column, space-around, center);
+      .story-two {
         display: flex;
       }
     }
-    .ment-img {
+    .story-img {
       img {
         width: 200px;
+        @include tablet {
+          width: 250px;
+        }
       }
     }
   }
   .hashtag-wrap {
     position: absolute;
-    bottom: 10rem;
-    z-index: 5;
+    top: 70%;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.7rem;
     @include tablet {
       bottom: 5rem;
       @include flex-layout(row, center, center);
+      flex-wrap: nowrap;
+      left: 50%;
+      transform: translateX(-50%);
     }
     @include desktop {
       margin: 5rem auto;
-      position: relative;
-      bottom: 0;
+      position: absolute;
+      bottom: -50%;
+      left: 50%;
     }
-    .hashtag {
-      @include hashtag-style();
-    }
+  }
+  .hashtag {
+    @include hashtag-style();
+    font-size: clamp(0.5rem, 3vw, 1rem);
   }
 }
