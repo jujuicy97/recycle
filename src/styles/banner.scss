@@ -5,6 +5,7 @@
   @include desktop {
     @include flex-layout(row, center, center);
     margin: 0 10%;
+    height: 90vh;
   }
   .bg-img {
     position: relative;
@@ -13,9 +14,10 @@
     height: 100%;
     @include desktop {
       position: absolute;
-      height: 90%;
-      width: 60%;
+      top: 10%;
       left: 40%;
+      height: 65%;
+      width: 60%;
     }
     img {
       width: 100%;
@@ -48,7 +50,7 @@
     height: 100%;
     color: var(--color-subtxt);
     @include flex-layout(column, flex-start, center);
-    gap: 4rem;
+    gap: 5rem;
     text-align: center;
     padding: 2rem;
     h1 {
@@ -58,7 +60,6 @@
     .story-two {
       display: none;
     }
-
     @include tablet {
       @include flex-layout(column, center, center);
       gap: 1.5rem;
@@ -74,8 +75,8 @@
     }
     @include desktop {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 40%;
+      transform: translateY(-45%);
       left: 0;
       width: 40%;
       min-width: 400px;
@@ -97,7 +98,8 @@
   }
   .hashtag-wrap {
     position: absolute;
-    top: 70%;padding: 0 1rem;
+    top: 70%;
+    padding: 0 1rem ;
     z-index: 2;
     @include flex-layout(row, center, center);
     flex-wrap: wrap;
@@ -110,10 +112,11 @@
       transform: translateX(-50%);
     }
     @include desktop {
-      margin: 5rem auto;
       position: absolute;
-      bottom: -50%;
+      bottom:-15%;
       left: 50%;
+      transform: translateX(-50%)
+
     }
     .hashtag {
       @include hashtag-style();

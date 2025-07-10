@@ -6,7 +6,6 @@ import CardList from "./components/CardList";
 import Goods from "./components/Goods";
 import Project from "./components/Project";
 import Main from "./components/Main";
-import NotePage from "./components/NotePage";
 import Banner from "./components/Banner";
 import Cart from "./components/Cart";
 import SlideCarousel from "./components/SlideCarousel";
@@ -22,7 +21,7 @@ const App = () => {
       const temp = prev.find((i) => {
         return i.id === item.id;
       });
-      let newItem
+      let newItem;
       if (temp) {
         //id 똑같은 item 찾음 + 상세페이지에서 갯수추가 - 수진 수정
         newItem = prev.map((j) => {
@@ -43,6 +42,7 @@ const App = () => {
       });
     });
   };
+  //카트 속 수량 더하기
   const handleIncrease = (id) => {
     setCart((prev) =>
       prev.map((item) =>
@@ -51,6 +51,7 @@ const App = () => {
     );
   };
 
+  //카트 속 수량 빼기
   const handleDecrease = (id) => {
     setCart((prev) =>
       prev.map((item) =>
@@ -76,7 +77,10 @@ const App = () => {
               </>
             }
           />
-          <Route path="/detail/:id" element={<DetailPage onAddCart={handleAddToCart}/>}/>
+          <Route
+            path="/detail/:id"
+            element={<DetailPage onAddCart={handleAddToCart} />}
+          />
           <Route
             path="/cart"
             element={

@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import selectItem from '../assets/new-items.json';
 import { MdOutlineStar } from "react-icons/md";
 import { GoShareAndroid } from "react-icons/go";
