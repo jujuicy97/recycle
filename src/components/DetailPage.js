@@ -14,10 +14,14 @@ import KeyRing from "./KeyRing";
 import { FaRegBookmark } from "react-icons/fa";
 
 const DetailPage = ({onAddCart}) => {
+  const [open,setOpen] = useState(false);
   const [count,setCount] = useState(0);
   const month = new Date().getMonth()+1;
   const date = new Date().getDate()+2;
   const { id } = useParams();
+  const OpenCount = ()=>{
+    setOpen(!open);
+  }
   const AddCartDetail = (item,count)=>{
     if(count > 0){
       onAddCart(item,count);
@@ -121,6 +125,11 @@ const DetailPage = ({onAddCart}) => {
               <FiPackage/> <strong>{month}/{date}</strong> 도착 예정 92%
             </p>
             <FaChevronDown className="down-arrow"/>
+          </div>
+          <div className="open-btn" onClick={OpenCount}>
+            {
+              open ? "∨" : "∧"
+            }
           </div>
           <div className="mobile-order">
           <div className="count-wrap">

@@ -144,9 +144,16 @@
                 bottom: 13%;
                 @include flex-layout(column);
                 gap: 1rem;
+                opacity: 0;
+                transition: 0.3s;
+                &.open{
+                    opacity: 1;
+                    height: auto;
+                }
                 @include desktop{
                     position: relative;
                     background-color: transparent;
+                    opacity: 1;
                 }
                 .count-wrap{
                     width: 90%;

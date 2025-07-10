@@ -29,3 +29,9 @@
 
 @import './styles/productinfo.scss';
 
+//임시로 레이아웃 설정
+.pc-only{
+    @include flex-layout();
+    gap: 3rem;
+    padding: 3rem 0;
+}
