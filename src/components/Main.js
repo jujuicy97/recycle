@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Foot from "./Footcopy";
 import Header from "./Header";
+import ScrollBtn from "./ScrollBtn";
 
 //import 헤더 컴포넌트
 //import 푸터 컴포넌트
@@ -16,6 +17,7 @@ const Main = () => {
         <Outlet /> {/* DetailPage 전환 자리 */}
       </main>
       <footer>
+        <ScrollBtn/>
         <Foot />
         {/* <p>공통 푸터 자리</p> */}
       </footer>

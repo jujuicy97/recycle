@@ -5,11 +5,11 @@ import BrandIntro from "./components/BrandIntro";
 import CardList from "./components/CardList";
 import Goods from "./components/Goods";
 import Project from "./components/Project";
-import ScrollBtn from "./components/ScrollBtn";
 import Main from "./components/Main";
 import DetailPage from "./components/DetailPage";
 import Banner from "./components/Banner";
 import Cart from "./components/Cart";
+import SlideCarousel from "./components/SlideCarousel";
 
 
 const App = () => {
@@ -55,7 +55,6 @@ const App = () => {
                 <Goods />
                 <CardList onAddCart={handleAddToCart} />
                 <Project />
-                <ScrollBtn />
               </>
             }
           />
