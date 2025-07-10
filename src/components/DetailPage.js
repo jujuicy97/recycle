@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import selectItem from '../assets/new-items.json';
 import { MdOutlineStar } from "react-icons/md";
 import { GoShareAndroid } from "react-icons/go";
@@ -7,22 +8,22 @@ import { FaCheck } from "react-icons/fa6";
 import { FiPackage } from "react-icons/fi";
 import { FaChevronDown } from "react-icons/fa";
 import Straw from "./Straw";
-//맨 아래에 div 마지막에 넣어놈
 
 
-const DetailPage = () => {
-  const month = new Date().getMonth()+1;
-  const date = new Date().getDate()+2;
+const DetailPage = ({ onAddCart }) => {
+  const [count, setCount] = useState(1); //카트에 추가 수량 관리 - 수진 추가
+  const month = new Date().getMonth() + 1;
+  const date = new Date().getDate() + 2;
   const { id } = useParams();
 
-  const filter = selectItem.filter((value,idx)=>{
-    if(id === value.id){
+  const filter = selectItem.filter((value, idx) => {
+    if (id === value.id) {
       return value;
     }
-  })
+  });
   const currentItem = filter[0];
   console.log(currentItem);
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 
   return (
     <div className="detail-page">
