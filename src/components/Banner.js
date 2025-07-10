@@ -1,9 +1,11 @@
-
 const Banner = () => {
   return (
     <div id="banner">
       <div className="bg-img">
-        <img src={`${process.env.PUBLIC_URL}/images/brand-main-01.jpg`} alt="zero flow 나뭇잎 배경" />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/brand-main-01.jpg`}
+          alt="zero flow 나뭇잎 배경"
+        />
       </div>
       <div className="story">
         <div className="story-zero">

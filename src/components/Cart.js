@@ -1,10 +1,13 @@
 import { RiDeleteBinLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
-const Cart = ({ cart, onDelete }) => {
+import items from '../assets/new-items.json';
+
+const Cart = ({ cart, onDelete, onIncrease, onDecrease }) => {
   const navigate = useNavigate();
   const totalPrice = cart.reduce((sum, item) => {
     return sum + item.price * item.count;
   }, 0);
+
   return (
     <div className="cart-page">
       <h2>My CART</h2>
@@ -25,16 +28,22 @@ const Cart = ({ cart, onDelete }) => {
         <>
           <ul>
             {cart.map((item) => {
+              const matchedItem = items.find((el) => el.id === item.id);
               return (
-                <li>
+                <li key={item.id}>
                   <img
-                    src={`${process.env.PUBLIC_URL}/images/new-items/${item.filename}`}
+                    src={`${process.env.PUBLIC_URL}${matchedItem?.image}`}
                     alt={item.title}
                   />
                   <div className="item-info">
                     <h4>{item.title}</h4>
-                    <h3>{item.price}</h3>
-                    <p>수량 : {item.count}</p>
+                    <h3>{item.price.toLocaleString()} 원</h3>
+                    <div className="count-control">
+                      <span>수량 : {item.count}</span>
+                      <button onClick={() => onDecrease(item.id)}>-</button>
+                      <button className="plus"
+                      onClick={() => onIncrease(item.id)}>+</button>
+                    </div>
                   </div>
                   <p
                     className="item-icon"
@@ -51,7 +60,7 @@ const Cart = ({ cart, onDelete }) => {
           <div className="cart-summary">
             <div className="summary-price">
               <p>총 결제 금액 : </p>
-              <h3>{totalPrice} 원</h3>
+              <h3>{totalPrice.toLocaleString()} 원</h3>
             </div>
             <button>주문하기</button>
           </div>
