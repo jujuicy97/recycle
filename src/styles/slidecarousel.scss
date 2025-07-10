@@ -1,0 +1,61 @@
+.slider{
+    padding: 4rem 0;
+    width: 100%;
+    position: relative;
+    @include desktop{
+        width: 50%;
+    }
+    .slick-slider{
+        @include flex-layout();
+        position: relative;
+        transition: 0.5s;
+        .btn-prev{
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 3rem;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            background-color: var(--color-subtxt);
+            padding: 0.5rem 0.7rem;
+            padding-right: 0.8rem;
+            padding-top: 0.7rem;
+            text-align: center;
+            border-radius: 2rem;
+            transition: 0.3s;
+        }
+        .btn-next{
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            right: 3rem;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            background-color: var(--color-subtxt);
+            padding: 0.5rem 0.7rem;
+            padding-left: 0.8rem;
+            padding-top: 0.7rem;
+            text-align: center;
+            border-radius: 2rem;
+            transition: 0.3s;
+        }
+        .btn-next:hover,.btn-prev:hover{
+            background-color: var(--color-maintxt);
+            color: var(--color-subtxt);
+        }
+        .slick-dots{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            button:before{
+                font-size: 0.7rem;
+            }
+        }
+        img{
+            width: 100%;
+            padding: 1rem 2rem;
+            border-radius: 5rem;
+        }
+    }
+}

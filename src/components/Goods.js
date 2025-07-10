@@ -1,5 +1,4 @@
 
-
 const Goods = () => {
   return (
     <div className="goods">

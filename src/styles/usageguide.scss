@@ -1,0 +1,23 @@
+div.guide-wrapper > h2 {
+
+  padding-bottom: 2rem;
+}
+.guide {
+  white-space: pre-line;
+
+  li {
+    @include flex-layout();
+    margin: 2rem 0;
+    &.left,
+    &.right {
+      .circle {
+        width: 150px;
+      }
+      p {
+        width: calc(100% - 200px);
+        max-width: 250px;
+        font-size: $font-small;
+      }
+    }
+  }
+}
