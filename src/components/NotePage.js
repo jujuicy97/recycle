@@ -3,9 +3,9 @@ import UsageGuide from "./UsageGuide";
 import ProductInfo from "./ProductInfo";
 import NotePage_Keyword from "./NotePage_Keyword";
 
-
 const NotePage = () => {
   const { id } = useParams();
+  return (
     <div className="wrapper">
       <main>
 
@@ -58,6 +58,7 @@ const NotePage = () => {
         </article>
       </main>
     </div>
+  )
 };
 
 export default NotePage;
