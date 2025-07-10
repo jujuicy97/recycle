@@ -58,7 +58,6 @@ const NotePage = () => {
         </article>
       </main>
     </div>
-  );
 };
 
 export default NotePage;
