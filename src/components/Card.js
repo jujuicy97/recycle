@@ -6,7 +6,7 @@ const Card = ({item,isHover,onAdd}) => {
   const {title,price,image,type} = item;
   const [checkHover,setCheckHover] = useState(false);
   const [showMsg,setShowMsg] = useState(false);
-   console.log("카드 type 값:", type);
+  //  console.log("카드 type 값:", type);
 
 //상세페이지로 이동
   const navigate = useNavigate();
