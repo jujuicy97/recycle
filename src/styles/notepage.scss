@@ -43,3 +43,102 @@
       }
     }
   }
+.detail-page{
+    color: var(--color-maintxt);
+    width: 100%;
+    @include flex-layout(column);
+    img{
+        width: 100%;
+    }
+    .title-top{
+        padding: 2rem 0;
+        padding-bottom: 1rem;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .share-icon{
+            font-size: 2rem;
+        }
+        .reviews{
+            display: flex;
+            align-items: center;
+            .star{
+                color: var(--color-primary);
+                font-size: 1.2rem;
+            }
+            span{
+                color: var(--color-Secondary);
+                padding-left: 8px;
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .price{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        h2{
+            font-size: 2rem;
+        }
+        span{
+            background-color: var(--color-primary);
+            color: var(--color-subtxt);
+            padding: 0.3rem 0.5rem;
+            border-radius: 10px;
+        }
+    }
+    .privilige{
+        padding: 1rem 0;
+        width: 90%;
+        display: flex;
+        gap: 1rem;
+        .two-type{
+            button{
+                display: inline-block;
+                margin-left: 10px;
+                border: none;
+                outline: none;
+                background: transparent;
+                font-weight: bold;
+            }
+        }
+    }
+    .deliver{
+        padding-bottom: 1rem;
+        width: 90%;
+        display: flex;
+        gap: 1rem;
+        .deli-info{
+            .deli-now{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                span{
+                    color: var(--color-primary);
+                    font-weight: bold;
+                }
+            }
+            .plus-charge{
+                font-size: 0.9rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+    .deli-date{
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+        border: 1px solid var(--color-maintxt);
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        .text{
+            padding-left: 1rem;
+        }
+        .down-arrow{
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+    }
+}
