@@ -14,7 +14,7 @@
   border-radius: 30px;
   outline: none;
   border-style: none;
-  font-size: 2rem;
+  font-size: $font-large;
   box-shadow: 0 0 8px var(--color-black);
   &:hover{
     background-color: var(--color-Hover);
