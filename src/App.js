@@ -6,7 +6,7 @@ import Goods from "./components/Goods";
 import Project from "./components/Project";
 import ScrollBtn from "./components/ScrollBtn";
 import Main from "./components/Main";
-import DetailPage from "./components/DetailPage";
+import NotePage from "./components/NotePage";
 import Banner from "./components/Banner";
 
 
@@ -28,7 +28,7 @@ const App = () => {
               </>
             }
           />
-          <Route path="/detail/:id" element={<DetailPage />} />
+          <Route path="/detail/:id" element={<NotePage />} />
         </Route>
       </Routes>
     </BrowserRouter>

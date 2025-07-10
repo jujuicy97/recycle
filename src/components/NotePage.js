@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
-import DetailPage_Keyword from "./DetailPage_Keyword";
 import UsageGuide from "./UsageGuide";
+import ProductInfo from "./ProductInfo";
+import NotePage_Keyword from "./NotePage_Keyword";
 
-const DetailPage = () => {
+const NotePage = () => {
   const { id } = useParams();
   return (
     <div className="wrapper">
@@ -42,12 +43,17 @@ const DetailPage = () => {
           </section>
 
           <section>
-            <DetailPage_Keyword />
+            <NotePage_Keyword />
           </section>
 
           <section>
             <UsageGuide />
           </section>
+
+          <section>
+            <ProductInfo />
+          </section>
+          
           
         </article>
       </main>
@@ -55,4 +61,4 @@ const DetailPage = () => {
   );
 };
 
-export default DetailPage;
+export default NotePage;
