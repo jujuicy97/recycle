@@ -1,10 +1,28 @@
 const Straw = () => {
   return (
-    <section className="product-detail">
-      <div className="product-info">
+    <section className="product-straw">
+      <div className="straw-head">
+        <div className="brand-product-info">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/logo-01.png`}
+            alt="zero flow 초록 색상 로고"
+          />
+          <p>지속가능한 미래를 위한 작은 실천</p>
+          <p>"매일 사용하는 작은 빨대 하나가 지구를 바꿀 수 있을까?"</p>
+          <p>
+            전 세계적으로 사용되는 플라스틱 빨대는 약 85억 개, 이 중 상당수가
+            바다로 흘러 들어가 해양 생태계를 파괴하고 있습니다.
+          </p>
+          <p>
+            우리가 매일 무심코 사용하는 일회용 빨대 하나가 지구에 남기는 흔적을
+            생각하며, 더 나은 대안을 찾고자 했습니다.
+          </p>
+          <p></p>
+          <p></p>
+        </div>
         <h2 className="title-straw">늘 쓰는 스텐 빨대 세트</h2>
         <hr />
-        <p className="short-desc">
+        <p className="straw-first-desc">
           지구를 생각하는 당신의 선택,
           <br />
           Zero Flow 늘 쓰는 스텐 빨대 세트입니다. <br />
@@ -17,7 +35,7 @@ const Straw = () => {
         </p>
       </div>
 
-      <div className="product-image">
+      <div className="straw-imgwrap">
         <img
           img
           src={`${process.env.PUBLIC_URL}/images/new-items/new-item-05-1.jpg`}
@@ -25,16 +43,16 @@ const Straw = () => {
         />
         <p>지속가능한 환경을 위한 친환경 선택</p>
         <p>
-          매년 수십억 개의 일회용 빨대가 바다로 흘러가는 환경 문제를 해결하는
+          매년 수십억 개의 일회용 빨대가 바다로 흘러가는 환경 문제를
           <br />
-          작은 실천이 바로 여기서 시작됩니다.
+          해결하는 작은 실천이 바로 여기서 시작됩니다.
         </p>
       </div>
-      <div className="product-info">
-        <div className="spec">
+      <div className="straw-spec-wrap">
+        <div className="straw-spec">
           <p>
             <strong>구성</strong>
-            <ul className="feature-list">
+            <ul className="straw-composition">
               <li>스테인리스 스틸 빨대 (직선형, 곡선형)</li>
               <li>전용 세척솔</li>
               <li>고급 휴대용 파우치</li>
@@ -48,17 +66,42 @@ const Straw = () => {
           </p>
         </div>
       </div>
-      <div className="product-gallery">
+      <div className="straw-gallery">
+        <ul className="short-desc">
+          <li>
+            <strong>내경 6mm</strong>
+            <br />
+            다양한 음료의 최적 흐름을 위한 황금비율
+          </li>
+          <li>
+            <strong>외경 8mm</strong>
+            <br />
+            입술에 편안한 감촉을 위한 완벽한 두께
+          </li>
+        </ul>
         <img
-          src={`${process.env.PUBLIC_URL}/images/straw/straw-01.jpg`}
-          alt="구성품 상세 이미지"
+          src={`${process.env.PUBLIC_URL}/images/straw/straw-05.jpg`}
+          alt="빨대 입구 이미지"
         />
       </div>
       <div className="product-info">
-        <p className="short-desc">반영구 사용 가능</p>
-
-        <p className="short-desc">다양한 음료에 최적화된 길이와 굵기</p>
+        <p className="short-desc"></p>
+        <p className="short-desc"></p>
+        <p className="short-desc">
+          내경 6mm: 다양한 음료의 최적 흐름을 위한 황금비율
+        </p>
+        <p className="short-desc">
+          외경 8mm: 입술에 편안한 감촉을 위한 완벽한 두께
+        </p>
       </div>
+      <div className="product-gallery">
+        <p className="short-desc">반영구 사용 가능</p>
+        <img
+          src={`${process.env.PUBLIC_URL}/images/straw/straw-01.jpg`}
+          alt="빨대 몸통 이미지"
+        />
+      </div>
+      {/* <div className="product-info"></div> */}
       <div className="product-info">
         <p>---</p>
         <p>세척솔 포함, 위생적인 관리 가능</p>

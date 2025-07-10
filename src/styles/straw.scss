@@ -22,18 +22,24 @@
 → 감성적이고 고급스러운 배경, 박스
 
 */
-.product-detail {
+.product-straw {
   word-break: keep-all;
   justify-content: center;
   align-items: center;
   margin: 2rem auto;
-  max-width: 700px;
-  padding: 2rem;
+  min-width: 600px;
+  max-width: 800px;
   background-color: #f0e7d9;
   color: var(--color-maintxt);
-  .product-info {
-    margin: 3rem 0;
+  .straw-head {
+    padding: 2rem;
+    margin: 2rem 0;
     text-align: left;
+    .brand-product-info{
+      img{
+        width: 300px;
+      }
+    }
     .title-straw {
       font-family: "GongGothicMedium";
       font-size: $font-large;
@@ -44,49 +50,74 @@
     hr {
       margin: 2rem 0;
     }
-    .short-desc {
+    .straw-first-desc {
       font-size: 1.15rem;
-      line-height: 1.35;
-      margin: 1rem 0;
-    }
-    .feature-list {
-      li {
-        list-style: disc;
-        margin-left: 1.5rem;
-      }
-    }
-    .spec {
-      p {
-        margin-bottom: 0.5rem;
-        line-height: 1.4;
-        strong {
-          font-weight: 600;
-          color: var(--color-black);
-        }
-      }
+      line-height: 1.4;
+      margin-top: 1rem;
     }
   }
-  .product-image {
-    background-color: #c0c0c0;
+  .straw-imgwrap {
+    background-color: #c5c5c5;
     @include flex-layout(column, center, center);
     gap: 1rem;
     min-height: 600px;
     color: var(--color-black);
     padding: 2rem;
     img {
-      max-width: 80%;
       padding-bottom: 1rem;
     }
     p {
       text-align: center;
-      line-height: 1.5;
+      line-height: 2;
     }
   }
-  .product-gallery {
-    margin-top: 2rem;
+  .straw-spec-wrap {
+    @include flex-layout(column, center, center);
+    margin: 5rem 0;
+    .straw-spec {
+      @include flex-layout(column, center, flex-start);
+      text-align: left;
+      p {
+        margin-bottom: 0.5rem;
+        line-height: 2;
+        strong {
+          font-weight: 600;
+          color: var(--color-black);
+        }
+        .straw-composition {
+          li {
+            list-style: disc;
+            line-height: 1.4;
+            margin-left: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .straw-gallery {
+    @include flex-layout(row, space-between, center);
+    padding-left: 3rem;
+    background-color: #a4957d;
     img {
-      width: 100%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      width: 40%;
+    }
+    ul {
+      li {
+        strong{
+          font-size: 1.3rem;
+        }
+        padding: 1rem 0;
+        color: var(--color-subtxt);
+        line-height: 1.5;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .feature-list {
+    li {
+      list-style: disc;
+      margin-left: 1.5rem;
     }
   }
 }
