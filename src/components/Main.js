@@ -8,7 +8,7 @@ import ScrollBtn from "./ScrollBtn";
 
 const Main = () => {
   return (
-    <>
+    <div className="layout-wrapper">
       <header>
         {/* 실제 메뉴 컴포넌트나 네비게이션 바 삽입 */}
         <Header/>
@@ -21,7 +21,7 @@ const Main = () => {
         <Foot />
         {/* <p>공통 푸터 자리</p> */}
       </footer>
-    </>
+    </div>
   );
 };
 

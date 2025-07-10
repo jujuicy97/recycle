@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import NewItem from "../assets/new-items.json";
+import Shampoobar from "./Shampoobar";
 import DetailPage_Keyword from "./DetailPage_Keyword";
 import UsageGuide from "./UsageGuide";
 import selectItem from '../assets/new-items.json';
@@ -11,9 +14,19 @@ import { FaChevronDown } from "react-icons/fa";
 
 
 const DetailPage = () => {
-  const month = new Date().getMonth()+1;
-  const date = new Date().getDate()+2;
   const { id } = useParams();
+  const [product, setProduct] = useState([]);
+  useEffect(() => {
+    // 실제 애플리케이션에서는 여기서 API를 호출하여 상품 ID에 해당하는 데이터를 가져옵니다.
+    // fetch(`/api/products/${id}`).then(res => res.json()).then(data => setProduct(data));
+    // 여기서는 예시 데이터를 사용합니다.
+    const foundProduct = NewItem.map((p) => p.id === id);
+    setProduct(foundProduct);
+  }, [id]); // id 값이 변경될 때마다 useEffect가 다시 실행됩니다.
+
+  if (!product) {
+    return <div>상품 정보를 불러오는 중이거나, 상품을 찾을 수 없습니다.</div>;
+  }
   const filter = selectItem.filter((value,idx)=>{
     if(id === value.id){
       return value;
@@ -24,53 +37,10 @@ const DetailPage = () => {
   window.scrollTo(0,0);
 
   return (
-    <div className="detail-page">
-      <img src={`${process.env.PUBLIC_URL}${currentItem.image}`}/>
-      <div className="title-top">
-        <div>
-          <h2>{currentItem.title}</h2>
-          <div className="reviews">
-            <MdOutlineStar className="star"/>
-            <MdOutlineStar className="star"/>
-            <MdOutlineStar className="star"/>
-            <MdOutlineStar className="star"/>
-            <MdOutlineStar className="star"/>
-            <span>(91,607)</span>
-          </div>
-        </div>
-        <GoShareAndroid className="share-icon"/>
-      </div>
-      <div className="price">
-        <h2>￦ {currentItem.price}</h2>
-        <span>특가</span>
-      </div>
-      <div className="privilige">
-        <span>혜택</span>
-        <div className="two-type">
-          <p><strong>{currentItem.price/1000}P</strong> 적립 (WELCOME 0.1%적립)</p>
-          <p>최대 <strong>7%</strong> 결제할인 (토스페이)<button>＞</button></p>
-        </div>
-      </div>
-      <div className="deliver">
-          <span>배송</span>
-          <div className="deli-info">
-            <strong>무료배송</strong>
-            <div className="deli-now">
-              <p>지금 주문시 <span>내일 출발</span></p>
-              <CiCircleInfo/>
-            </div>
-            <p>일반택배</p>
-            <p className="plus-charge">
-              <FaCheck /> 제주도/도서산간 지역 4,000원
-            </p>
-          </div>
-      </div>
-      <div className="deli-date">
-        <p className="text">
-          <FiPackage/> <strong>{month}/{date}</strong> 도착 예정 92%
-        </p>
-        <FaChevronDown className="down-arrow"/>
-      </div>
+    <div>
+      <h2>상품 상세페이지</h2>
+      <p>상품 ID : {id}</p>
+      <Shampoobar />
     </div>
   );
 };

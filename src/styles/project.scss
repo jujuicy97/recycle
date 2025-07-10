@@ -15,8 +15,14 @@
     transform: translate(-50%, -50%);
     }
     h2{
-      // @include font-title; // 폰트 수정할거 //이부분 아마 font-weight만 조정해주심될것같아요!
+      font-size: $font-large;
       padding: 0.5rem 0;
+      @include tablet{
+        font-size: $font-h1;
+      }
+      @include desktop{
+        font-size: $font-h1;
+      }
     }
     button {
     @include banner-btn;

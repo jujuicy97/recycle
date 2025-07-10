@@ -1,0 +1,10 @@
+.product-info{
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  .info-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+}
