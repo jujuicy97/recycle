@@ -50,6 +50,7 @@ const App = () => {
       )
     );
   };
+
   //카트 속 수량 빼기
   const handleDecrease = (id) => {
     setCart((prev) =>

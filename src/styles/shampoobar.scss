@@ -1,62 +1,167 @@
+* h2 {
+  font-size: $font-large;
+}
+
 .shampoobar {
+  padding: 0 2rem;
+  margin-top: 5rem;
   text-align: center;
   width: 100%;
-  img * {
-    width: 300px;
-  }
   .title {
     padding: 2rem 0;
+    @include tablet {
+      padding: 0 2rem;
+    }
     hr {
       border: 1px solid var(maintxt);
-      // margin: 2rem 0;
     }
     p {
-      padding-top: 1rem;
+      padding-top: 1.5rem;
     }
     h1 {
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       font-size: $font-h1;
       color: var(--color-Secondary);
     }
   }
+
   .hashtag {
-    width: 90%;
-    margin: 1rem 0;
+    margin: 1rem;
     h2 {
       word-break: keep-all;
       margin: 5rem 0;
-    }
-    button {
-      margin-bottom: 3rem;
-      @include hashtag-style-2();
-    }
-  }
-}
-// How to use
-.how-to-use{
-  
-}
-
-
-
-// 배송정보
-.info {
-  word-break: keep-all;
-  background-color: var(--color-subtxt);
-  .info-one {
-    text-align: left;
-    padding: 4rem 2rem;
-    li {
-      hr {
-        margin: 1rem 0;
+      @include tablet {
+        padding: 0 12rem;
+        margin-top: 8rem;
       }
     }
-    h3{
+    button {
+      margin: 0 0.2rem;
+      @include hashtag-style-2();
+      font-weight: bolder;
+      @include tablet {
+        margin-bottom: 5rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  // 상세페이지
+  .img-wrap {
+    @include tablet {
+      padding: 0 12rem;
+    }
+    img {
+      display: block;
+    }
+    h2 {
+      margin-top: 5rem;
+      margin: 10rem 1.5rem 4rem 1.5rem;
+      word-break: keep-all;
+    }
+    p {
+      @include tablet {
+        font-size: 1.3rem;
+      }
+    }
+    padding-top: 5rem;
+    .img-source-one {
+      .source-one-txt {
+        height: 250px;
+        background-color: var(--color-Secondary);
+        color: var(--color-subtxt);
+        @include flex-layout(column);
+        gap: 0.5rem;
+        h3 {
+          @include tablet {
+            font-size: $font-medium;
+          }
+        }
+        p {
+          padding: 1rem 3rem;
+          line-height: 1.5rem;
+          @include tablet {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+    .img-source-two {
+      margin-top: 8rem;
+      .icon-wrap {
+        padding: 6rem 0;
+      }
+      .thankyou-txt {
+        height: 400px;
+        font-size: $font-h1;
+        background-color: var(--color-Hover);
+        color: var(--color-subtxt);
+        @include flex-layout();
+      }
+      .forest {
+        position: relative;
+        .forest-txt {
+          position: absolute;
+          width: 80%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: var(--color-subtxt);
+          h3 {
+            padding: 3rem 0;
+          }
+          p {
+            word-break: break-all;
+            padding: 0.5rem 0;
+          }
+        }
+      }
+    }
+  }
+
+  // How to use
+  .how-to-use {
+    h4 {
+      margin-top: 8rem;
+      margin-bottom: 1rem;
+    }
+    img {
       margin-top: 2rem;
     }
-    p{
-      font-size: $font-small-small;
-      padding: 0.2rem 0;
+    .hair {
+      background-color: var(--color-Secondary);
+      color: var(--color-subtxt);
+      ul {
+        text-align: left;
+        word-break: break-all;
+        padding: 5rem;
+        margin-bottom: 8rem;
+      }
+      li {
+        margin: 4rem 0;
+        h3 {
+          padding: 2rem 0;
+        }
+      }
+    }
+    .zeroflow-goods {
+      h3 {
+        display: inline-block;
+        padding: 0.5rem;
+        width: 60%;
+        background-color: rgb(196, 214, 153);
+      }
+      p {
+        padding: 2rem 0;
+        color: rgb(196, 214, 153);
+        font-size: $font-medium;
+        word-break: keep-all;
+      }
+    }
+    .icon-paper {
+      img {
+        margin-bottom: 8rem;
+      }
     }
   }
 }
