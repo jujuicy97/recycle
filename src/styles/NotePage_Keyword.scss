@@ -1,8 +1,18 @@
 .keyword{
+  padding: 3rem 0;
+    @include tablet {
+    padding: 4rem 0; // 태블릿
+  }
+
+  @include desktop {
+    padding: 5rem 0; // 데스크탑
+  }
   li{
       @include flex-layout();
       gap: 0.4rem;
       margin: 1rem 0;
+
+      
     p{
       background-color: #eee;
       display: inline-block;

@@ -6,6 +6,7 @@ import { CiCircleInfo } from "react-icons/ci";
 import { FaCheck } from "react-icons/fa6";
 import { FiPackage } from "react-icons/fi";
 import { FaChevronDown } from "react-icons/fa";
+import NotePage from "./NotePage";
 
 
 const DetailPage = () => {
@@ -69,6 +70,7 @@ const DetailPage = () => {
         </p>
         <FaChevronDown className="down-arrow"/>
       </div>
+        <NotePage />
     </div>
   );
 };
