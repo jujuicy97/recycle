@@ -1,22 +1,71 @@
 import { useParams } from "react-router-dom";
+import { useEffect, useRef } from "react";          
+import gsap from "gsap";                            
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import UsageGuide from "./UsageGuide";
 import ProductInfo from "./ProductInfo";
 import NotePage_Keyword from "./NotePage_Keyword";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const NotePage = () => {
   const { id } = useParams();
+
+  //스크롤 효과
+  const mainImgRef = useRef(null);          
+  const imgWrapRef = useRef(null);            
+
+
+  useEffect(() => {
+  //스크롤 효과 삽입
+    gsap.fromTo(
+      mainImgRef.current,
+      { opacity: 0, y: 40, scale: 0.95, filter: "blur(4px)" },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        filter: "blur(0px)",
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: mainImgRef.current,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    const images = gsap.utils.toArray(".img-wrap img");
+    gsap.fromTo(
+      images,
+      { opacity: 0, y: 40, scale: 0.95, filter: "blur(4px)" },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        filter: "blur(0px)",
+        duration: 0.8,
+        ease: "power2.out",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: imgWrapRef.current,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
     <div className="wrapper">
       <main>
-
-        <section className="shared-main">
-          <p>공통 메인 자리</p>
-        </section>
-
+        
         <article className="product-detail">
-          <h2>Re:note</h2>
+          <h2 className="title-main">Re:note</h2>
           <p>Re:note는 다시 쓰임을 고민하는 노트입니다.</p>
-          
+        
           <section className="main-txt">
             <p>
               다시 쓰는 오늘, 다시 피는 이야기.
@@ -25,10 +74,10 @@ const NotePage = () => {
               <br />
               새로운 재료가 되어 다시 쓰임이 됩니다.
             </p>
-            <img src="/images/note/note-1.jpg" />
+            <img src="/images/note/note-1.jpg" className="mainimg" ref={mainImgRef}/>
           </section>
 
-          <section className="img-wrap">
+          <section className="img-wrap" ref={imgWrapRef}>
               <img src="/images/note/note-2.jpg" />
               <img src="/images/note/note-3.jpg" />
               <img src="/images/note/note-4.jpg"  className="row"/>

@@ -29,9 +29,19 @@ const KeyRing = () => {
                 <p>● 플라스틱 특성상 미세한 기포, 줄무늬, 눌림자국이 있을 수 있으며 이는 불량이 아닙니다.</p>
                 <p>● 배송 시 <strong>친환경 포장재</strong>를 사용하며, 벌도 요청 시 <strong>메시지 카드 포함 가능</strong>합니다.</p>
             </div>
+            <div className="prod-info">
+                <h2>플라스틱 꽃잎 키링 제품 정보</h2>
+                <div className="specific-info">
+                    
+                </div>
+            </div>
+            <div className="refund">
+                <h2>교환/환불 규정</h2>
+                <hr/>
+            </div>
             <div className="notice">
                 <div className="icon-txt">
-                    
+
                 </div>
             </div>
         </div>

@@ -12,8 +12,6 @@ import NotePage from "./NotePage";
 import Straw from "./Straw";
 import KeyRing from "./KeyRing";
 import { FaRegBookmark } from "react-icons/fa";
-import { useState } from "react";
-
 
 const DetailPage = ({onAddCart}) => {
   const [count,setCount] = useState(0);

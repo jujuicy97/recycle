@@ -136,6 +136,7 @@
                 }
             }
             .mobile-order{
+                z-index: 5;
                 padding: 1rem 0;
                 width: 100%;
                 background-color: var(--color-subtxt);
@@ -181,6 +182,7 @@
                 }
             }
             .order-wrap{
+                z-index: 5;
                 height: 130px;
                 background-color: var(--color-bg);
                 position: fixed;

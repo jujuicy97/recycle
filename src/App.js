@@ -71,7 +71,10 @@ const App = () => {
               <>
                 <Banner />
                 <BrandIntro />
+                <div className="pc-only">
                 <Goods />
+                <SlideCarousel/>
+                </div>
                 <CardList onAddCart={handleAddToCart} />
                 <Project />
               </>
