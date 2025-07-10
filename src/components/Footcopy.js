@@ -4,7 +4,7 @@ import { FiTwitter } from "react-icons/fi";
 
 const Foot = () => {
   return (
-    <footer>
+    <>
       <div className="footer-one">
         <h2>COMPANY INFO</h2>
         <ul>
@@ -27,7 +27,7 @@ const Foot = () => {
       <div className="footer-three">
         <p>Copyright ⓒZEROFLOW.All rights reserved.</p>
       </div>
-    </footer>
+    </>
   );
 };
 

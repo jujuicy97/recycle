@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
-import DetailPage_Keyword from "./DetailPage_Keyword";
-import UsageGuide from "./UsageGuide";import selectItem from '../assets/new-items.json';
+import selectItem from '../assets/new-items.json';
 import { MdOutlineStar } from "react-icons/md";
 import { GoShareAndroid } from "react-icons/go";
 import { CiCircleInfo } from "react-icons/ci";
@@ -22,6 +21,7 @@ const DetailPage = () => {
     }
   })
   const currentItem = filter[0];
+  console.log(currentItem);
   window.scrollTo(0,0);
 
   return (
