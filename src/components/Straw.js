@@ -3,10 +3,12 @@ const Straw = () => {
     <section className="product-detail">
       <div className="product-info">
         <h2>늘 쓰는 스텐 빨대 세트</h2>
+        <hr/>
         <p className="short-desc">
           지구를 생각하는 당신의 선택,
           <br />
           Zero Flow 늘 쓰는 스텐 빨대 세트입니다. <br />
+          <br />
           일회용 플라스틱 빨대 대신 반영구적으로 사용할 수 있는 친환경 대안으로,
           <br />
           매일 사용하는 음료 시간을 더욱 특별하게 만들어드립니다. <br />
