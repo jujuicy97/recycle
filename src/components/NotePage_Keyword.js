@@ -1,6 +1,6 @@
 import keyword from '../assets/note-keyword.json';
 
-const DetailPage_Keyword = () => {
+const NotePage_Keyword = () => {
   return (
     <ul className="keyword">
       {keyword.map((list, i) => (
@@ -14,4 +14,4 @@ const DetailPage_Keyword = () => {
   );
 };
 
-export default DetailPage_Keyword;
+export default NotePage_Keyword;
