@@ -27,17 +27,33 @@
   justify-content: center;
   align-items: center;
   margin: 2rem auto;
-  min-width: 600px;
-  max-width: 800px;
+  width: 485px;
   background-color: #f0e7d9;
   color: var(--color-maintxt);
+  @include tablet {
+    width: 600px;
+  }
+  @include desktop {
+    width: 800px;
+  }
   .straw-head {
     padding: 2rem;
     margin: 2rem 0;
     text-align: left;
     .brand-product-info{
       img{
-        width: 300px;
+        width: 250px;
+        border: 2px dashed var(--color-primary);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+      .brand-infotxt{
+        margin: 1rem 0;
+        p{
+          padding: 0.5rem 0;
+          line-height: 1.5;
+        }
+
       }
     }
     .title-straw {
@@ -96,8 +112,11 @@
   }
   .straw-gallery {
     @include flex-layout(row, space-between, center);
-    padding-left: 3rem;
+    padding-left: 0.5rem;
     background-color: #a4957d;
+    @include tablet {
+      padding-left: 3rem;
+    }
     img {
       width: 40%;
     }
