@@ -10,6 +10,7 @@ import NotePage from "./components/NotePage";
 import Banner from "./components/Banner";
 import Cart from "./components/Cart";
 import SlideCarousel from "./components/SlideCarousel";
+import DetailPage from "./components/DetailPage";
 
 
 const App = () => {
@@ -58,6 +59,7 @@ const App = () => {
               </>
             }
           />
+          <Route path="/detail/:id" element={<DetailPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
