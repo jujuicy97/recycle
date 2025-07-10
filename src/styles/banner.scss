@@ -1,4 +1,5 @@
 #banner {
+  color: var(--color-maintxt);
   position: relative;
   height: 70vh;
   @include desktop {
@@ -45,7 +46,7 @@
     z-index: 2;
     width: 100%;
     height: 100%;
-    color: #e5e2da;
+    color: var(--color-subtxt);
     @include flex-layout(column, flex-start, center);
     gap: 4rem;
     text-align: center;
@@ -57,7 +58,7 @@
     .story-two {
       display: none;
     }
-    
+
     @include tablet {
       @include flex-layout(column, center, center);
       gap: 1.5rem;
@@ -96,11 +97,10 @@
   }
   .hashtag-wrap {
     position: absolute;
-    top: 70%;
+    top: 70%;padding: 0 1rem;
     z-index: 2;
-    display: flex;
+    @include flex-layout(row, center, center);
     flex-wrap: wrap;
-    justify-content: center;
     gap: 0.7rem;
     @include tablet {
       bottom: 5rem;
@@ -115,9 +115,9 @@
       bottom: -50%;
       left: 50%;
     }
-  }
-  .hashtag {
-    @include hashtag-style();
-    font-size: clamp(0.5rem, 3vw, 1rem);
+    .hashtag {
+      @include hashtag-style();
+      font-size: clamp(0.5rem, 3vw, 1rem);
+    }
   }
 }
