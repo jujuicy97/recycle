@@ -7,8 +7,7 @@ div.guide-wrapper > h2 {
 
   li {
     @include flex-layout();
-    margin: 1rem 0;
-
+    margin: 2rem 0;
     &.left,
     &.right {
       .circle {

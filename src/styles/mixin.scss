@@ -61,16 +61,16 @@
 }
 
 
-// goods, project 버튼 컴포넌트 -> 확인하기
+// goods, project 버튼 컴포넌트
 @mixin banner-btn {
   margin-top: 1.5rem;
-  width: 200px;
+  width: 250px;
   padding: 8px 16px;
   border-radius: 0;
   border: 1px solid var(--color-maintxt);
   background-color: transparent;
   color: var(--color-maintxt);
-  // @include font-body; // 폰트 믹스인 확인후 수정해야 함
+  font-size: $font-small;
   &:hover {
     background-color: var(--color-Hover);
     color: var(--color-subtxt);
@@ -85,6 +85,18 @@
   border-radius: 5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  white-space: nowrap;
+}
+
+
+// 해쉬태그 컴포넌트2(테두리색 있고 배경색 흰색ver)
+@mixin hashtag-style-2($bg:var(--color-bg)){
+  color: var(--color-Secondary);
+  background-color: $bg;
+  border: 1.5px solid var(--color-Secondary);
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
   white-space: nowrap;
 }
 

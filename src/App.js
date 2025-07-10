@@ -6,7 +6,7 @@ import CardList from "./components/CardList";
 import Goods from "./components/Goods";
 import Project from "./components/Project";
 import Main from "./components/Main";
-import DetailPage from "./components/DetailPage";
+import NotePage from "./components/NotePage";
 import Banner from "./components/Banner";
 import Cart from "./components/Cart";
 import SlideCarousel from "./components/SlideCarousel";
@@ -57,11 +57,6 @@ const App = () => {
                 <Project />
               </>
             }
-          />
-          <Route path="/detail/:id" element={<DetailPage />} />
-          <Route
-            path="/cart"
-            element={<Cart cart={cart} onDelete={handleDeleteCart} />}
           />
         </Route>
       </Routes>

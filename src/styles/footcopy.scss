@@ -49,7 +49,7 @@ footer {
         display: inline-block;
         padding-right: 1rem;
         margin: 0.5rem 0;
-        // @include font-sub;
+        font-size: $font-large;
         cursor: pointer;
       }
     }
