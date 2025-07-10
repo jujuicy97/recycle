@@ -2,7 +2,7 @@ const Straw = () => {
   return (
     <section className="product-detail">
       <div className="product-info">
-        <h2>늘 쓰는 스텐 빨대 세트</h2>
+        <h2 className="title-straw">늘 쓰는 스텐 빨대 세트</h2>
         <p className="short-desc">
           지구를 생각하는 당신의 선택,
           <br />

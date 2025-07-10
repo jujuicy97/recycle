@@ -50,17 +50,17 @@
   {
     "id": "item007",
     "image": "/images/new-items/new-item-07-1.jpg",
-    "title": "폐유리병",
+    "title": "빛조각 유리화병",
     "price": 6500,
     "available": true,
-    "type": "ZERO"
+    "type": "RECYCLE"
   },
   {
     "id": "item008",
     "image": "/images/new-items/new-item-08-1.jpg",
-    "title": "숨 쉬는 대나무 칫솔",
+    "title": "타이어솔 플립플랍",
     "price": 6500,
     "available": true,
-    "type": "ZERO"
+    "type": "UPCYCLE"
   }
 ]
