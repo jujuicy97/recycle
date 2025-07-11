@@ -57,7 +57,6 @@ const Banner = () => {
 
       <div className="story">
         <div className="story-one" ref={storyOneRef}>
-
           <p>
             지속가능한 미래를 위한 우리의 발걸음
             <br />
