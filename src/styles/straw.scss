@@ -26,7 +26,7 @@
   word-break: keep-all;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto;
+  margin: 0 auto 2rem auto;
   width: 485px;
   background-color: #f0e7d9;
   color: var(--color-maintxt);
@@ -85,7 +85,9 @@
     color: var(--color-black);
     padding: 2rem;
     img {
-      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border: 10px solid #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
     p {
       text-align: center;
@@ -98,6 +100,7 @@
     .straw-spec {
       @include flex-layout(column, center, flex-start);
       text-align: left;
+      font-size: 1.1rem;
       p {
         margin-bottom: 0.5rem;
         line-height: 2;
@@ -117,38 +120,44 @@
   }
   .straw-gallery1 {
     @include flex-layout(row, space-between, center);
-    padding-left: 0.5rem;
     background-color: #a4957d;
-    @include tablet {
-      padding-left: 2rem;
-    }
     img {
+      border-left: 2px solid var(--color-subtxt);
+      padding: 0.5rem 0.5rem 0.5rem 1rem;
       width: 40%;
+      margin: 0.5rem;
       @include tablet {
         width: 45%;
       }
     }
     .straw-short-desc {
+      padding: 0 1rem;
+      @include tablet {
+        padding-left: 1.5rem;
+      }
+      @include desktop {
+        padding-left: 2rem;
+      }
       li {
-        strong {
-          font-size: 1rem;
-        }
         padding: 0.5rem 0;
         color: var(--color-subtxt);
-        line-height: 1.2;
-        font-size: 0.8rem;
+        line-height: 1.3;
+        font-size: 0.9rem;
+        strong {
+          font-size: 1.2rem;
+        }
         @include tablet {
           strong {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
           }
           padding: 0.7rem 0;
           color: var(--color-subtxt);
-          line-height: 1.3;
+          line-height: 1.4;
           font-size: 1rem;
         }
         @include desktop {
           strong {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
           }
           padding: 1rem 0;
           color: var(--color-subtxt);
@@ -161,48 +170,105 @@
   .straw-gallery2 {
     @include flex-layout(column, center, center);
     background-color: #d6cfc2;
+    padding: 3rem;
+    gap: 2rem;
     img {
       width: 100%;
     }
     .straw-desc-wrap {
       line-height: 1.5;
-      padding: 2rem;
       color: var(--color-Secondary);
       font-size: 1.1rem;
-      h3, strong {
+      h3,
+      strong {
         font-size: 1.3rem;
       }
-      @include tablet{
+      @include tablet {
         line-height: 1.7;
-      padding: 3rem;
-      font-size: 1.4rem;
-      h3, strong {
-        font-size: 1.7rem;
-      }
+        font-size: 1.4rem;
+        h3,
+        strong {
+          font-size: 1.7rem;
+        }
       }
     }
   }
   .straw-gallery3 {
-    @include flex-layout(column, center, center);
-    background-color: #d6cfc2;
-    img {
-      width: 100%;
-    }
-    .straw-desc-wrap {
-      line-height: 1.5;
+    @include flex-layout(column, center, left);
+
+    .straw-compo-desc {
+      text-align: center;
       padding: 2rem;
-      color: var(--color-Secondary);
-      font-size: 1.1rem;
-      h3, strong {
+      margin: 5rem 0;
+      line-height: 1.5;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--color-maintxt);
+      @include tablet {
+        line-height: 1.7;
+        padding: 3rem;
+        font-size: 1.4rem;
+      }
+    }
+    .straw-img-style {
+      position: relative;
+      .overlay-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        border: 5px solid #fff;
+        color: var(--color-black);
+        z-index: 2;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    
+  }
+  .straw-use {
+    @include flex-layout(column, center, center);
+    padding: 5rem 0;
+    gap: 2rem;
+    text-align: center;
+    line-height: 1.5;
+    background-color: #e6d8c3;
+    .straw-usetitle {
+      color: var(--color-Secondary)
+    }
+    p {
+      color: var(--color-Hover)
+    }
+  }
+  .brand-product-foot {
+    @include flex-layout(column, center, center);
+    gap: 2rem;
+    padding: 3rem 0;
+    line-height: 1.5;
+    background-color: #59755b;
+    .brand-infotxt-foot {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--color-subtxt);
+      strong {
         font-size: 1.3rem;
       }
-      @include tablet{
-        line-height: 1.7;
-      padding: 3rem;
-      font-size: 1.4rem;
-      h3, strong {
-        font-size: 1.7rem;
+    }
+    .straw-hashtag-wrap {
+      @include flex-layout(row, center, center);
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      @include tablet {
+        padding: 0 3rem;
       }
+      @include desktop {
+        padding: 0 10rem;
+      }
+      .straw-hashtag {
+        @include hashtag-style-2();
       }
     }
   }
