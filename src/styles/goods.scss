@@ -1,0 +1,62 @@
+.goods {
+  color: var(--color-maintxt);
+  margin: 2rem 0;
+  position: relative;
+  @include desktop{
+    position: relative;
+  }
+  .goods-wrap {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+    @include flex-layout(column, center, center);
+    @include tablet {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include desktop{
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -25%);
+    }
+
+    h2 {
+      font-size: $font-large;
+      padding: 0.5rem 0;
+      @include tablet {
+        font-size: $font-h1;
+      }
+      @include desktop {
+        font-size: $font-h1;
+      }
+    }
+    button {
+      @include banner-btn;
+    }
+  }
+  .img-wrap {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      @include tablet {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        object-position: center 80%;
+        display: block;
+      }
+      @include desktop {
+        width: 50%;
+        height: 700px;
+        object-fit: cover;
+        object-position: center 90%;
+        display: block;
+      }
+    }
+  }
+}

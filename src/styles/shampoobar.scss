@@ -10,7 +10,8 @@
   .title {
     padding: 2rem 0;
     @include tablet {
-      padding: 0 2rem;
+      width: 800px;
+      margin: 0 auto;
     }
     hr {
       border: 1px solid var(maintxt);
@@ -31,16 +32,18 @@
       word-break: keep-all;
       margin: 5rem 0;
       @include tablet {
-        padding: 0 12rem;
+        width: 800px;
+        margin: 0 auto;
         margin-top: 8rem;
       }
     }
     button {
       margin: 0 0.2rem;
+      text-wrap: wrap;
       @include hashtag-style-2();
       font-weight: bolder;
       @include tablet {
-        margin-bottom: 5rem;
+        margin: 5rem 0.5rem;
         font-size: 1.2rem;
       }
     }
@@ -49,7 +52,9 @@
   // 상세페이지
   .img-wrap {
     @include tablet {
-      padding: 0 12rem;
+      // padding: 0 12rem;
+      width: 800px;
+      margin: 0 auto;
     }
     img {
       display: block;
@@ -109,10 +114,20 @@
           color: var(--color-subtxt);
           h3 {
             padding: 3rem 0;
+            font-size: $font-medium;
+            @include tablet {
+              font-size: $font-large;
+              margin-bottom: 4rem;
+            }
           }
           p {
             word-break: break-all;
             padding: 0.5rem 0;
+            @include tablet {
+              padding: 1rem 3rem;
+              word-break: keep-all;
+
+            }
           }
         }
       }
@@ -134,11 +149,15 @@
       ul {
         text-align: left;
         word-break: break-all;
-        padding: 5rem;
+        padding: 2rem;
         margin-bottom: 8rem;
       }
       li {
         margin: 4rem 0;
+                @include tablet{
+          padding: 0 5rem ;
+          word-break: keep-all;
+        }
         h3 {
           padding: 2rem 0;
         }
@@ -161,6 +180,10 @@
     .icon-paper {
       img {
         margin-bottom: 8rem;
+        @include tablet{
+          width: 600px;
+          margin: 5rem auto;
+        }
       }
     }
   }
