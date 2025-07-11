@@ -1,11 +1,25 @@
+.pc-only{
+    @include desktop{
+        height: 520px;
+        width: 100%;
+        //임시로 레이아웃 설정
+        position: relative;
+        margin: 6rem 0;
+    }
+}
 .slider{
     padding: 4rem 0;
     width: 100%;
     position: relative;
     @include desktop{
+        padding: 0;
         width: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
     .slick-slider{
+        width: 100%;
         @include flex-layout();
         position: relative;
         transition: 0.5s;
@@ -52,10 +66,18 @@
                 font-size: 0.7rem;
             }
         }
-        img{
+        .slick-list{
             width: 100%;
-            padding: 1rem 2rem;
-            border-radius: 5rem;
+            img{
+                width: 90%;
+                padding: 1rem 2rem;
+                border-radius: 5rem;
+                @include desktop{
+                    border-radius: 0;
+                    height: 520px;
+                    padding: 0;
+                }
+        }
         }
     }
 }
