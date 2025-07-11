@@ -102,3 +102,26 @@
   white-space: nowrap;
 }
 
+@mixin hashtag-style-3($bg: rgba(254, 252, 247, 0.6)) {
+  color: var(--color-Secondary); 
+  background-color: $bg;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+//지피티가 유리 효과도 알려주네용
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); 
+}
+
+@mixin hashtag-style-4($bg: rgba(254, 252, 247, 0.8)) {
+  color: var(--color-Secondary);
+  background-color: $bg; 
+  // border: 1.5px solid var(--color-Secondary);
+  border-radius: 5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+
+}

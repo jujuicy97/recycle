@@ -3,9 +3,6 @@ import UsageData from '../assets/UsageGuide.json';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
-gsap.registerPlugin(ScrollTrigger);
-
 const UsageGuide = () => {
   const listRef = useRef(null);
 
