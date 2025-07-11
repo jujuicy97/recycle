@@ -8,9 +8,6 @@ const Banner = () => {
         />
       </div>
       <div className="story">
-        <div className="story-zero">
-          <h1>BRAND STORY</h1>
-        </div>
         <div className="story-one">
           <p>
             지속가능한 미래를 위한 우리의 발걸음

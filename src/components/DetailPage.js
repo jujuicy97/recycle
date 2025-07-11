@@ -13,6 +13,7 @@ import Straw from "./Straw";
 import KeyRing from "./KeyRing";
 import { FaRegBookmark } from "react-icons/fa";
 
+
 const DetailPage = ({onAddCart}) => {
   const [count,setCount] = useState(0);
   const month = new Date().getMonth()+1;

@@ -53,19 +53,14 @@
     gap: 5rem;
     text-align: center;
     padding: 2rem;
-    h1 {
-      font-size: 3rem;
-    }
-    .story-zero,
     .story-two {
       display: none;
     }
     @include tablet {
       @include flex-layout(column, center, center);
-      gap: 1.5rem;
+      gap: 6rem;
       top: 30%;
       transform: translateY(-40%);
-      .story-zero,
       .story-one {
         display: flex;
       }
@@ -99,7 +94,7 @@
   .hashtag-wrap {
     position: absolute;
     top: 70%;
-    padding: 0 1rem ;
+    padding: 0 1rem;
     z-index: 2;
     @include flex-layout(row, center, center);
     flex-wrap: wrap;
@@ -113,10 +108,9 @@
     }
     @include desktop {
       position: absolute;
-      bottom:-15%;
+      bottom: -15%;
       left: 50%;
-      transform: translateX(-50%)
-
+      transform: translateX(-50%);
     }
     .hashtag {
       @include hashtag-style();
