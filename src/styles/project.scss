@@ -1,8 +1,8 @@
-.project, .goods {
+.project{
   color: var(--color-maintxt);
-  margin: 2rem 0;
+  margin-top: 2rem;
   position: relative;
-  .project-wrap, .goods-wrap {
+  .project-wrap{
     width: 100%;
     position: absolute;
     top: 40%;
@@ -14,6 +14,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     }
+
     h2{
       font-size: $font-large;
       padding: 0.5rem 0;
