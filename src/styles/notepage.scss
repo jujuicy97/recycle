@@ -2,8 +2,10 @@
   background-color: #eee;
 }
 .wrapper{
+  width: 100%;
   min-height: 100vh;
   .product-detail{
+    max-width: 700px;
     text-align: center;
     .title-main{
       text-align: center;

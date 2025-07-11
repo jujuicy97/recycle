@@ -377,13 +377,13 @@ body {
 .card-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
   margin: 0 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .card-list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (min-width: 1440px) {
@@ -395,8 +395,24 @@ body {
 
 .card {
   display: inline-block;
-  text-align: center;
+  display: block;
   position: relative;
+  text-align: left;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  padding: 0.5rem;
+}
+.card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 .card-img {
   width: 100%;
@@ -413,8 +429,8 @@ body {
   color: var(--color-black);
   border-radius: 5px;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 12px;
+  right: 12px;
   font-family: "WantedSans", sans-serif;
 }
 .card-title {
@@ -436,8 +452,8 @@ body {
   cursor: pointer;
 }
 .card-add:hover {
-  -webkit-filter: brightness(80%);
-          filter: brightness(80%);
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
 }
 .card .card-img {
   cursor: pointer;
@@ -782,7 +798,7 @@ header .head .cart {
 #banner {
   color: var(--color-maintxt);
   position: relative;
-  height: 70vh;
+  height: 93vh;
 }
 @media screen and (min-width: 1440px) {
   #banner {
@@ -793,25 +809,25 @@ header .head .cart {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin: 0 10%;
     height: 90vh;
   }
 }
 #banner .bg-img {
-  position: relative;
-  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
 @media screen and (min-width: 1440px) {
   #banner .bg-img {
-    position: absolute;
     top: 10%;
     left: 40%;
     height: 65%;
@@ -836,13 +852,16 @@ header .head .cart {
   z-index: 1;
 }
 #banner .story {
+  word-break: keep-all;
+  text-align: center;
   position: absolute;
-  top: 50%;
+  bottom: -30%;
   -webkit-transform: translateY(-40%);
           transform: translateY(-40%);
   z-index: 2;
   width: 100%;
   height: 100%;
+  line-height: 1.3;
   color: var(--color-subtxt);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -851,25 +870,22 @@ header .head .cart {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 5rem;
-  text-align: center;
-  padding: 2rem;
+  gap: 1.5rem;
 }
-#banner .story h1 {
-  font-size: 3rem;
-}
-#banner .story .story-zero,
 #banner .story .story-two {
   display: none;
 }
 @media screen and (min-width: 768px) {
   #banner .story {
+    top: 30%;
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -884,15 +900,14 @@ header .head .cart {
         -ms-flex-align: center;
             align-items: center;
     gap: 1.5rem;
-    top: 30%;
-    -webkit-transform: translateY(-40%);
-            transform: translateY(-40%);
   }
-  #banner .story .story-zero,
   #banner .story .story-one {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   #banner .story .story-two {
     display: none;
@@ -900,11 +915,11 @@ header .head .cart {
 }
 @media screen and (min-width: 1440px) {
   #banner .story {
-    position: absolute;
+    padding: 0 2rem;
     top: 40%;
+    left: 0;
     -webkit-transform: translateY(-45%);
             transform: translateY(-45%);
-    left: 0;
     width: 40%;
     min-width: 400px;
     height: 50vh;
@@ -926,19 +941,20 @@ header .head .cart {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    text-align: left;
   }
 }
 #banner .story .story-img img {
-  width: 200px;
+  width: 250px;
 }
 @media screen and (min-width: 768px) {
   #banner .story .story-img img {
-    width: 250px;
+    width: 300px;
   }
 }
 #banner .hashtag-wrap {
   position: absolute;
-  top: 70%;
+  top: 52%;
   padding: 0 1rem;
   z-index: 2;
   display: -webkit-box;
@@ -960,7 +976,7 @@ header .head .cart {
 }
 @media screen and (min-width: 768px) {
   #banner .hashtag-wrap {
-    bottom: 5rem;
+    bottom: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -984,21 +1000,33 @@ header .head .cart {
 @media screen and (min-width: 1440px) {
   #banner .hashtag-wrap {
     position: absolute;
-    bottom: -15%;
+    bottom: -30%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
 }
 #banner .hashtag-wrap .hashtag {
-  color: var(--color-subtxt);
-  background-color: var(--color-Secondary);
-  border: 1px solid var(--color-subtxt);
+  color: var(--color-Secondary);
+  background-color: rgba(254, 252, 247, 0.6);
   border-radius: 5rem;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   white-space: nowrap;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   font-size: clamp(0.5rem, 3vw, 1rem);
+}
+@media screen and (min-width: 1440px) {
+  #banner .hashtag-wrap .hashtag {
+    color: var(--color-subtxt);
+    background-color: var(--color-Secondary);
+    border: 1px solid var(--color-subtxt);
+    border-radius: 5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
 }
 
 nav {
@@ -1423,13 +1451,11 @@ nav.mobile-open .menu-wrapper {
 }
 
 .wrapper {
+  width: 100%;
   min-height: 100vh;
 }
-.wrapper .shared-main {
-  background-color: #cca7a7;
-  height: 700px;
-}
 .wrapper .product-detail {
+  max-width: 700px;
   text-align: center;
 }
 .wrapper .product-detail .title-main {
@@ -1463,47 +1489,49 @@ nav.mobile-open .menu-wrapper {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
-.wrapper .product-detail .img-wrap {
+.wrapper .product-detail .note-img-wrap {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 3rem;
 }
-.wrapper .product-detail .img-wrap img {
+.wrapper .product-detail .note-img-wrap img {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wrapper .product-detail .img-wrap img.row {
+.wrapper .product-detail .note-img-wrap img.row {
   grid-column: 1/3;
   height: 150px;
 }
 @media screen and (min-width: 768px) {
-  .wrapper .product-detail .img-wrap img.row {
+  .wrapper .product-detail .note-img-wrap img.row {
     grid-column: 1/-1;
     height: 200px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .wrapper .product-detail .img-wrap img.row {
+  .wrapper .product-detail .note-img-wrap img.row {
     height: 200px;
   }
 }
-.wrapper .product-detail .img-wrap p {
+.wrapper .product-detail .note-img-wrap p {
   text-align: left;
-  margin: 5rem 0;
   font-size: 1rem;
+  line-height: 1.6;
+  word-break: keep-all;
+  white-space: normal;
 }
 @media screen and (min-width: 768px) {
-  .wrapper .product-detail .img-wrap p {
+  .wrapper .product-detail .note-img-wrap p {
     margin-top: 4rem;
     font-size: 1.1rem;
   }
 }
 @media screen and (min-width: 1440px) {
-  .wrapper .product-detail .img-wrap p {
+  .wrapper .product-detail .note-img-wrap p {
     margin-top: 4rem;
     font-size: 1.2rem;
   }
