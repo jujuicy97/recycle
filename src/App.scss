@@ -7,6 +7,7 @@
 @import './styles/project.scss';
 @import './styles/footcopy.scss';
 @import './styles/scrollbtn.scss';
+@import './styles/goods.scss';
 
 @import './styles/header.scss';
 @import './styles/banner.scss';
@@ -29,9 +30,4 @@
 
 @import './styles/productinfo.scss';
 
-//임시로 레이아웃 설정
-.pc-only{
-    @include flex-layout();
-    gap: 3rem;
-    padding: 3rem 0;
-}
+
