@@ -7,7 +7,6 @@ import UsageGuide from "./UsageGuide";
 import ProductInfo from "./ProductInfo";
 import NotePage_Keyword from "./NotePage_Keyword";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const NotePage = () => {
   const { id } = useParams();
@@ -37,7 +36,7 @@ const NotePage = () => {
       }
     );
 
-    const images = gsap.utils.toArray(".img-wrap img");
+    const images = gsap.utils.toArray(".note-img-wrap img");
     gsap.fromTo(
       images,
       { opacity: 0, y: 40, scale: 0.95, filter: "blur(4px)" },
@@ -77,18 +76,14 @@ const NotePage = () => {
             <img src="/images/note/note-1.jpg" className="mainimg" ref={mainImgRef}/>
           </section>
 
-          <section className="img-wrap" ref={imgWrapRef}>
+          <section className="note-img-wrap" ref={imgWrapRef}>
               <img src="/images/note/note-2.jpg" />
               <img src="/images/note/note-3.jpg" />
               <img src="/images/note/note-4.jpg"  className="row"/>
               <img src="/images/note/note-5.jpg" />
-              <p>
-                재생지 노트는,
-                <br />
-                버려진 종이를 재가공한
-                <br />
-                재생지를 사용하여 만듭니다.
-              </p>
+<p>
+  재생지 노트는 버려진 종이들이 다시 태어나 새로운 이야기와 가치를 품는 공간입니다. 환경을 생각하는 마음으로 지속 가능한 삶을 담았습니다. 소중한 순간들을 기록하는 당신의 이야기에 따뜻한 의미를 더합니다.
+</p>
           </section>
 
           <section>
@@ -102,7 +97,6 @@ const NotePage = () => {
           <section>
             <ProductInfo />
           </section>
-          
           
         </article>
       </main>

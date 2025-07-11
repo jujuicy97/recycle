@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# 프로젝트 개요
+## 프로젝트이름 : Project:Re
+## 프로젝트 기간 : 7/7 ~ 7/14일
+## 참여인원 : 총 5명
+## 협업 및 작업 방식 : Slack 을 이용하여 실시간 소통하였고, GitHub를 활용하여 코드 버전을 관리하였음.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 설명
+### 1. 레이아웃
+- **React 컴포넌트**를 기반으로 레이아웃을 배치하였습니다.
+- **Flex**와 **Grid**를 사용하여 콘텐츠를 효율적이고 가독성 높게 구성하였습니다.
+- **Position**을 사용하여 이미지와 텍스트를 정밀하게 배치하고, 반응형 전환시 자연스럽게 흐름이
+유지되도록 구성하였습니다.
+- **SCSS Mixin**을 사용하여 반응형 미디어쿼리를 관리하고, 반복되는 레이아웃 로직을 효율적으로
+재사용하였습니다.
+- **GSAP 애니매이션**을 사용하여 여러 효과를 적용하여 사용자 경험을 향상시켰습니다.
 
-## Available Scripts
 
-In the project directory, you can run:
+### 2. 색상 사용
+- **메인 컬러**로 **올리브 계열인 (#7A8B55)** 색상을 사용하여 친환경과 지속 가능성을 시각적으로 표현하였습니다.
+- **서브 컬러**로 **진한 녹색(#3E5D4B)** 색상을 사용하여 메인 컬러와의 조화를 주며 강조가 필요한 버튼이나 테두리 등에 포인트를 주는 데 사용하였습니다.
+- 그 외에는 기본 컬러인 **하얀색(#fff)** 과 **검은색(#000)** 만을 함께 사용하여 적은 색상 구성으로 눈의 피로도를 줄였습니다.
 
-### `npm start`
+### 3. UI 디자인 방식
+- 전체적인 UI 구상 및 디자인은 **Figma**를 활용해 제작하였습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 4. 반응형 웹 지원
+- 모바일, 태블릿, 데스크톱 등의 **다양한 화면 크기에 최적화된 반응형 레이아웃**을 제공하여 사용자의 접근성을 높였습니다.
+- 미디어 쿼리를 활용하여 각 디바이스에 맞춰 적절하게 레이아웃과 요소 크기가 조정되게끔 개발하였습니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 5. 제작에 사용된 스킬 및 툴
+- **이미지 편집** : Photoshop, Illustrator 
+- **디자인** : Figma
+- **프레임워크** : React
+- **프론트엔드 개발** : React, SCSS
+- **플러그인** : react-slick, slick-carousel, react-icons, SCSS, Web Font, GSAP, AOS
 
-### `npm test`
+### 6. 제작 참여율
+- 개인 프로젝트(100%)로 진행
+- 기획, UI 디자인 구상 및 설계, 개발, 배포까지 전 과정을 직접 수행하였습니다. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 문제점 및 개선 계획
+### 1. 제작 사이트 문제점
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 2. 향후 개선 계획
