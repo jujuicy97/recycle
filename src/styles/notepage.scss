@@ -1,13 +1,8 @@
 .shared-menu{
   background-color: #eee;
 }
-
 .wrapper{
   min-height: 100vh;
-  .shared-main{
-    background-color: #cca7a7;
-    height: 700px; //임의로 설정
-  } 
   .product-detail{
     text-align: center;
     .title-main{
@@ -19,12 +14,12 @@
       margin-bottom: 0;
 //반응형
       @include tablet {
-        font-size: 3rem; // 태블릿
+        font-size: 3rem; 
         margin-top: 6rem;
       }
 
       @include desktop {
-        font-size: 3.5rem; // 데스크탑
+        font-size: 3.5rem;
       }
     }
     p {
@@ -40,7 +35,7 @@
       }
 
     }
-    .img-wrap{
+    .note-img-wrap{
       margin: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -65,8 +60,12 @@
       }
       p{
         text-align: left;
-        margin: 5rem 0;
-                font-size: 1rem;
+        // margin: 2rem 0;
+        font-size: 1rem;
+
+        line-height: 1.6; 
+        word-break: keep-all; 
+        white-space: normal;        
 
         @include tablet {
           margin-top: 4rem;

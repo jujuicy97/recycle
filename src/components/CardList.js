@@ -8,7 +8,7 @@ const CardList = ({onAddCart}) => {
 
   return (
     <div className="card-list">
-      {NewItem.slice(0, 8).map((item) => {
+      {NewItem.map((item) => {
         return <Card key={item.id} item={item} onAdd={onAddCart} />;
       })}
     </div>

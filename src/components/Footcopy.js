@@ -1,6 +1,7 @@
 import { FiInstagram } from "react-icons/fi";
 import { FaFacebook } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
+import ScrollBtn from "./ScrollBtn";
 
 const Foot = () => {
   return (
@@ -27,6 +28,7 @@ const Foot = () => {
       <div className="footer-three">
         <p>Copyright ⓒZEROFLOW.All rights reserved.</p>
       </div>
+      <ScrollBtn/>
     </>
   );
 };

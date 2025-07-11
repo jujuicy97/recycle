@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import selectItem from '../assets/new-items.json';
 import { MdOutlineStar } from "react-icons/md";
 import { GoShareAndroid } from "react-icons/go";
@@ -15,10 +15,15 @@ import { FaRegBookmark } from "react-icons/fa";
 
 
 const DetailPage = ({onAddCart}) => {
+  const [isMobile,setIsMobile] = useState(window.innerWidth < 1440);
+  const[showCount,setShowCount] = useState(false);
   const [count,setCount] = useState(0);
   const month = new Date().getMonth()+1;
   const date = new Date().getDate()+2;
   const { id } = useParams();
+  const toggleCountArea = ()=>{
+    setShowCount(prev => !prev);
+  }
   const AddCartDetail = (item,count)=>{
     if(count > 0){
       onAddCart(item,count);
@@ -64,7 +69,18 @@ const DetailPage = ({onAddCart}) => {
         return null;
     }
   }
-  window.scrollTo(0,0);
+  useEffect(()=>{
+    const handleResize = ()=>{
+      setIsMobile(window.innerWidth < 1440);
+    };
+    window.scrollTo(0,0);
+
+    window.addEventListener("resize",handleResize);
+    handleResize();
+    return ()=>{
+      window.removeEventListener("resize",handleResize);
+    };
+  },[])
 
   return (
     <div className="detail-page">
@@ -121,7 +137,12 @@ const DetailPage = ({onAddCart}) => {
             </p>
             <FaChevronDown className="down-arrow"/>
           </div>
-          <div className="mobile-order">
+          <div className="toggle-count-area">
+            <button onClick={toggleCountArea}>
+              {showCount ? "▼ 수량 닫기" : "▲ 수량 선택"}
+            </button>
+          </div>
+          <div className={`mobile-order ${isMobile ? (showCount ? 'show' : 'hide') : 'pc-visible'}`}>
           <div className="count-wrap">
             <p>{currentItem.title}</p>
             <div className="count-price">

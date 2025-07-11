@@ -53,6 +53,7 @@
     color: var(--color-subtxt);
     @include flex-layout(column, center, center);
       gap: 1.5rem;
+
     .story-two {
       display: none;
     }
