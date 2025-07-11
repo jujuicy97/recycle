@@ -1,10 +1,29 @@
 const Straw = () => {
   return (
-    <section className="product-detail">
-      <div className="product-info">
+    <section className="product-straw">
+      <div className="straw-head">
+        <div className="brand-product-info">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/logo-01.png`}
+            alt="zero flow 초록 색상 로고"
+          />
+          <div className="brand-infotxt">
+            <h3>지속가능한 미래를 위한 작은 실천을 함께합니다</h3>
+            <p>"매일 사용하는 작은 빨대 하나가 지구를 바꿀 수 있을까?"</p>
+            <p>
+              전 세계적으로 사용되는 플라스틱 빨대는 약 85억 개,
+              <br />이 중 상당수가 바다로 흘러 들어가 해양 생태계를 파괴하고
+              있습니다.
+            </p>
+            <p>
+              우리가 매일 무심코 사용하는 일회용 빨대 하나가
+              <br />
+              지구에 남기는 흔적을 생각하며, 더 나은 대안을 찾고자 했습니다.
+            </p>
+          </div>
+        </div>
         <h2 className="title-straw">늘 쓰는 스텐 빨대 세트</h2>
-        <hr />
-        <p className="short-desc">
+        <p className="straw-first-desc">
           지구를 생각하는 당신의 선택,
           <br />
           Zero Flow 늘 쓰는 스텐 빨대 세트입니다. <br />
@@ -17,7 +36,7 @@ const Straw = () => {
         </p>
       </div>
 
-      <div className="product-image">
+      <div className="straw-imgwrap">
         <img
           img
           src={`${process.env.PUBLIC_URL}/images/new-items/new-item-05-1.jpg`}
@@ -25,16 +44,16 @@ const Straw = () => {
         />
         <p>지속가능한 환경을 위한 친환경 선택</p>
         <p>
-          매년 수십억 개의 일회용 빨대가 바다로 흘러가는 환경 문제를 해결하는
+          매년 수십억 개의 일회용 빨대가 바다로 흘러가는 환경 문제를
           <br />
-          작은 실천이 바로 여기서 시작됩니다.
+          해결하는 작은 실천이 바로 여기서 시작됩니다.
         </p>
       </div>
-      <div className="product-info">
-        <div className="spec">
+      <div className="straw-spec-wrap">
+        <div className="straw-spec">
           <p>
             <strong>구성</strong>
-            <ul className="feature-list">
+            <ul className="straw-composition">
               <li>스테인리스 스틸 빨대 (직선형, 곡선형)</li>
               <li>전용 세척솔</li>
               <li>고급 휴대용 파우치</li>
@@ -48,91 +67,142 @@ const Straw = () => {
           </p>
         </div>
       </div>
-      <div className="product-gallery">
+      <div className="straw-gallery1">
+        <ul className="straw-short-desc">
+          <li>
+            <strong>내경 6mm</strong>
+            <br />
+            다양한 음료의 최적 흐름을 위한 황금비율
+          </li>
+          <li>
+            <strong>외경 8mm</strong>
+            <br />
+            입술에 편안한 감촉을 위한 완벽한 두께
+          </li>
+          <li>
+            <strong>라운드 처리</strong>
+            <br />
+            빨대 끝을 라운드로 마감하여 안전하게 사용
+          </li>
+        </ul>
+        <img
+          src={`${process.env.PUBLIC_URL}/images/straw/straw-05.jpg`}
+          alt="빨대 입구 이미지"
+        />
+      </div>
+      <div className="straw-gallery2">
         <img
           src={`${process.env.PUBLIC_URL}/images/straw/straw-01.jpg`}
-          alt="구성품 상세 이미지"
+          alt="빨대 몸통 이미지"
         />
+        <div className="straw-desc-wrap">
+          <h3>스테인리스 304 소재</h3>
+          <p>
+            Zero Flow 빨대는 국제적으로 인정받는 <br />
+            최고 등급의 스테인리스 스틸 304를 사용합니다. <br />
+            <br />
+            <strong>안전성 보장</strong>
+            <br />
+            FDA 승인 식품등급 소재로 인체에 안전 <br />
+            부식에 강한 내구성 세균 번식을 억제하는 항균 특성 <br />
+            BPA, 중금속 등 유해물질 완전 무함유 <br />
+            산성 및 알칼리성 음료에도 안전하게 사용 가능
+          </p>
+        </div>
       </div>
-      <div className="product-info">
-        <p className="short-desc">반영구 사용 가능</p>
-
-        <p className="short-desc">다양한 음료에 최적화된 길이와 굵기</p>
+      <div className="straw-gallery3">
+        <div className="straw-compo-desc">
+          <p>─── 세척솔 포함, 위생적인 관리 가능 ───</p>
+          <p>─── 고급 파우치 제공으로 휴대성 UP ───</p>
+        </div>
+        <div className="straw-img-style">
+          <div className="overlay-box"></div>
+          <img
+            src={`${process.env.PUBLIC_URL}/images/straw/straw-06.jpg`}
+            alt="구성품 상세 이미지"
+          />
+        </div>
       </div>
-      <div className="product-info">
-        <p>---</p>
-        <p>세척솔 포함, 위생적인 관리 가능</p>
-        <p>고급 파우치 제공으로 휴대성 UP</p>
-        <p className="short-desc">---</p>
+      <div className="straw-use">
+        <h2 className="straw-usetitle">사용 방법</h2>
+        <p>
+          1. 첫 사용 전 세척 미지근한 물에 중성세제로 깨끗이 세척 <br />
+          포함된 청소 브러시로 빨대 내부까지 꼼꼼히 청소
+          <br /> 깨끗한 물로 충분히 헹군 후 완전히 건조
+        </p>
+        <p>
+          2. 일상 사용 차가운 음료부터 따뜻한 음료까지 자유롭게 사용 <br />
+          <br />
+          직선형: 물, 주스, 스무디 등에 적합 <br />
+          곡선형: 텀블러, 머그컵 사용 시 편리
+        </p>
+        <p>
+          3. 사용 후 관리 사용 즉시 찬물로 헹구기 <br />
+          청소 브러시로 내부 세척 자연 건조 또는 깨끗한 수건으로 물기 제거
+        </p>
+        <p>
+          4. 휴대 및 보관 완전히 건조 후 전용 파우치에 보관 <br />
+          외출 시 파우치에 넣어 위생적으로 휴대 서늘하고 건조한 곳에 보관
+        </p>
+        <br />
+        <h2 className="straw-usetitle">자주 묻는 질문 (FAQ)</h2>
+        <p>
+          Q. 스테인리스 빨대는 안전한가요?
+          <br />
+          A. 네, 식품등급 스테인리스 304 소재로
+          <br /> FDA 승인을 받은 완전히 안전한 제품입니다. <br />
+          BPA나 중금속 등 유해물질이 전혀 포함되지 않았습니다.
+        </p>
+        <p>
+          Q. 뜨거운 음료에도 사용할 수 있나요? <br />
+          A. 스테인리스 소재 특성상 열전도율이 높아 <br />
+          뜨거운 음료 사용 시 빨대가 뜨거워질 수 있습니다. <br />
+          60도 이하의 미지근한 음료 사용을 권장합니다.
+        </p>
+        <p>
+          Q. 청소가 어렵지 않나요? <br />
+          A. 전용 청소 브러시가 포함되어 있어 간편하게 청소할 수 있습니다.
+          <br />
+          식기세척기 사용도 가능합니다.
+        </p>
+        <p>
+          Q. 빨대 길이와 굵기는 어떻게 되나요? <br />
+          A. 길이 22cm, 내경 6mm로 대부분의 컵과 텀블러에 적합합니다. <br />
+          직선형과 곡선형이 제공됩니다.
+        </p>
+        <p>
+          Q. 얼마나 오래 사용할 수 있나요?
+          <br />
+          A. 적절한 관리 하에 반영구적으로 사용 가능합니다. <br />
+          일반적으로 5년 이상 사용하실 수 있습니다.
+        </p>
+        <p>
+          Q. 금속 맛이 나지 않나요?
+          <br />
+          A. 고품질 스테인리스 304 소재로 <br />
+          무미무취하여 음료 본연의 맛을 즐기실 수 있습니다.
+        </p>
       </div>
-      <div className="product-gallery">
-        <img
-          src={`${process.env.PUBLIC_URL}/images/new-items/new-item-05-2.jpg`}
-          alt="구성품 상세 이미지"
-        />
+      <div className="brand-product-foot">
+        <p className="brand-infotxt-foot">
+          <strong>작은 변화가 큰 흐름을 만들어냅니다.</strong>
+          <br />
+          <br />
+          Zero Flow와 함께 당신의 일상에서 시작되는 변화로 <br />
+          지구의 미래를 바꿔보세요.
+        </p>
+        <div className="straw-hashtag-wrap">
+          <p className="straw-hashtag">#제로웨이스트</p>
+          <p className="straw-hashtag">#지속가능한생활</p>
+          <p className="straw-hashtag">#친환경실천</p>
+          <p className="straw-hashtag">#그린리빙</p>
+          <p className="straw-hashtag">#리유저블빨대</p>
+          <p className="straw-hashtag">#스테인리스빨대</p>
+          <p className="straw-hashtag">#제로플라스틱</p>
+        </div>
       </div>
-      {/* 스테인리스 304 소재 안전성
-식품등급 스테인리스 스틸 304 사용
-Zero Flow 빨대는 국제적으로 인정받는 최고 등급의 스테인리스 스틸 304를 사용합니다.
-안전성 보장:
 
-FDA 승인 식품등급 소재로 인체에 완전히 안전
-녹슬지 않고 부식에 강한 내구성
-세균 번식을 억제하는 항균 특성
-BPA, 중금속 등 유해물질 완전 무함유
-산성 및 알칼리성 음료에도 안전하게 사용 가능
-
-스테인리스 304의 특징:
-
-니켈 8%, 크롬 18% 함유로 최적의 내식성 확보
-고온 살균 및 식기세척기 사용 가능
-무미무취로 음료 본연의 맛 유지
-반영구적 사용으로 경제적이고 환경친화적
-
-전 세계 프리미엄 주방용품에 사용되는 동일한 소재로, 안심하고 매일 사용하실 수 있습니다.
-
-해시태그 키워드
-#제로웨이스트 #친환경빨대 #스테인리스빨대 #리유저블빨대 #플라스틱프리 #제로플라스틱 #친환경라이프 #지속가능한생활 #환경보호 #그린라이프 #에코프렌들리 #제로웨이스트챌린지 #플라스틱없는생활 #친환경용품 #재사용빨대 #환경생각 #지구사랑 #그린리빙 #지속가능성 #친환경실천
-
-사용 방법
-1. 첫 사용 전 세척
-
-미지근한 물에 중성세제로 깨끗이 세척
-포함된 청소 브러시로 빨대 내부까지 꼼꼼히 청소
-깨끗한 물로 충분히 헹군 후 완전히 건조
-
-2. 일상 사용
-
-차가운 음료부터 따뜻한 음료까지 자유롭게 사용
-직선형: 물, 주스, 스무디 등에 적합
-곡선형: 텀블러, 머그컵 사용 시 편리
-
-3. 사용 후 관리
-
-사용 즉시 찬물로 헹구기
-청소 브러시로 내부 세척
-자연 건조 또는 깨끗한 수건으로 물기 제거
-
-4. 휴대 및 보관
-
-완전히 건조 후 전용 파우치에 보관
-외출 시 파우치에 넣어 위생적으로 휴대
-서늘하고 건조한 곳에 보관
-
-
-자주 묻는 질문 (FAQ)
-Q1. 스테인리스 빨대는 안전한가요?
-A. 네, 식품등급 스테인리스 304 소재로 FDA 승인을 받은 완전히 안전한 제품입니다. BPA나 중금속 등 유해물질이 전혀 포함되지 않았습니다.
-Q2. 뜨거운 음료에도 사용할 수 있나요?
-A. 스테인리스 소재 특성상 열전도율이 높아 뜨거운 음료 사용 시 빨대가 뜨거워질 수 있습니다. 60도 이하의 미지근한 음료 사용을 권장합니다.
-Q3. 청소가 어렵지 않나요?
-A. 전용 청소 브러시가 포함되어 있어 간편하게 청소할 수 있습니다. 식기세척기 사용도 가능합니다.
-Q4. 빨대 길이와 굵기는 어떻게 되나요?
-A. 길이 21.5cm, 내경 6mm로 대부분의 컵과 텀블러에 적합합니다. 직선형과 곡선형 각각 2개씩 제공됩니다.
-Q5. 얼마나 오래 사용할 수 있나요?
-A. 적절한 관리 하에 반영구적으로 사용 가능합니다. 일반적으로 5년 이상 사용하실 수 있습니다.
-Q6. 금속 맛이 나지 않나요?
-A. 고품질 스테인리스 304 소재로 무미무취하여 음료 본연의 맛을 즐기실 수 있습니다.
+      {/* 
 
 사용상 주의사항
 안전사항:

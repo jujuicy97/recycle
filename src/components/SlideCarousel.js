@@ -6,9 +6,9 @@ import { MdArrowBackIosNew } from "react-icons/md";
 
 const SlideCarousel = () => {
     const sliderImg = [
-        `${process.env.PUBLIC_URL}/images/slider-items/slider-items-01.jpg`,
-        `${process.env.PUBLIC_URL}/images/slider-items/slider-items-02.jpg`,
-        `${process.env.PUBLIC_URL}/images/slider-items/slider-items-03.jpg`
+        "/images/slider-items/slider-items-01.jpg",
+        "/images/slider-items/slider-items-02.jpg",
+        "/images/slider-items/slider-items-03.jpg"
     ];
     const NextArrow = ({onClick})=>{
         return (
@@ -57,7 +57,7 @@ const SlideCarousel = () => {
             <Slider {...settings}>
                 {
                     sliderImg.map((item,idx)=>{
-                        return <img key={idx} src={item}/>
+                        return <img key={idx} src={`${process.env.PUBLIC_URL}${item}`} alt="슬라이드이미지"/>
                     })
                 }
             </Slider>

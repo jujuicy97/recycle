@@ -1,12 +1,15 @@
-@import './styles/global.scss';
 @import './styles/mixin.scss';
+@import './styles/global.scss';
+
 
 @import "./styles/brandintro.scss";
 @import './styles/shampoobar.scss';
 @import "./styles/card.scss";
+@import './styles/goods.scss';
 @import './styles/project.scss';
 @import './styles/footcopy.scss';
 @import './styles/scrollbtn.scss';
+@import './styles/goods.scss';
 
 @import './styles/header.scss';
 @import './styles/banner.scss';
@@ -28,4 +31,5 @@
 @import './styles/straw.scss';
 
 @import './styles/productinfo.scss';
+
 

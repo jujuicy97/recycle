@@ -1,7 +1,7 @@
 .btn-wrap{
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 20px;
   @include flex-layout(row,flex-end,center);
   z-index: 10;
 }
