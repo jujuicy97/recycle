@@ -1,12 +1,16 @@
 import { RiDeleteBinLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import items from '../assets/new-items.json';
+import { useEffect } from "react";
 
 const Cart = ({ cart, onDelete, onIncrease, onDecrease }) => {
   const navigate = useNavigate();
   const totalPrice = cart.reduce((sum, item) => {
     return sum + item.price * item.count;
   }, 0);
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
   return (
     <div className="cart-page">

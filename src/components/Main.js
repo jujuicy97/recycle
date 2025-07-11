@@ -17,7 +17,7 @@ const Main = () => {
         <Outlet /> {/* DetailPage 전환 자리 */}
       </main>
       <footer>
-        <ScrollBtn/>
+        {/* <ScrollBtn/> */}
         <Foot />
         {/* <p>공통 푸터 자리</p> */}
       </footer>

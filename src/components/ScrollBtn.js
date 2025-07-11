@@ -4,28 +4,47 @@ import { IoIosArrowUp } from "react-icons/io";
 
 const ScrollBtn = () => {
   const [showBtn, setShowBtn]=useState(false);
+  const [isPC,setIsPC] = useState(window.innerWidth >= 1440);
   const scrollTop =()=>{
     window.scrollTo({ top:0, behavior: "smooth"});
   }
-    useEffect(() => {
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsPC(window.innerWidth >= 1024);
+    };
+
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShowBtn(true);
+      if (isPC) {
+        setShowBtn(true); // PC에서는 항상 보여줌
       } else {
-        setShowBtn(false);
+        const scrollPosition = window.innerHeight + window.scrollY;
+        const fullHeight = document.body.offsetHeight;
+        if (scrollPosition >= fullHeight - 10) {
+          setShowBtn(true); // 모바일: 맨 아래까지 내리면 보이게
+        } else {
+          setShowBtn(false);
+        }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    handleResize(); // 초기 설정
+    handleScroll(); // 초기 스크롤 위치 반영
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isPC]);
 
   return (
-    <div className="btn-wrap">
+    <>
+    {showBtn && (<div className="btn-wrap">
     <button className="scrolltop-btn" onClick={scrollTop}><IoIosArrowUp /></button>
-    </div>
+    </div>)}
+    </>
   );
 };
 
