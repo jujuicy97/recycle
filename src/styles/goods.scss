@@ -3,7 +3,11 @@
   margin: 2rem 0;
   position: relative;
   @include desktop{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 50%;
   }
   .goods-wrap {
     width: 100%;
@@ -20,8 +24,8 @@
     @include desktop{
       position: absolute;
       top: 50%;
-      left: 25%;
-      transform: translate(-50%, -25%);
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     h2 {
@@ -51,8 +55,8 @@
         display: block;
       }
       @include desktop {
-        width: 50%;
-        height: 700px;
+        width: 100%;
+        height: 520px;
         object-fit: cover;
         object-position: center 90%;
         display: block;
