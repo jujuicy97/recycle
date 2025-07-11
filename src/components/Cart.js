@@ -11,6 +11,7 @@ const Cart = ({ cart, onDelete, onIncrease, onDecrease }) => {
 useEffect(() => {
   window.scrollTo(0, 0);
 }, []);
+
   return (
     <div className="cart-page">
       <h2>My CART</h2>
