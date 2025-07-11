@@ -1,11 +1,11 @@
 .card-list{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1.5rem; 
+  padding: 2rem 1.5rem; 
   margin: 0 1.5rem;
   @include tablet{
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   @include desktop{
     grid-template-columns: repeat(4, 1fr);
@@ -14,9 +14,19 @@
 }
 
 .card{
-  display: inline-block;
-  text-align: center;
+  display: inline-block; 
+  display: block;
   position: relative;
+  text-align: left; 
+  border-radius: 0.5rem; 
+  overflow: hidden; 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  padding: 0.5rem;
+  &:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);    
+  }
   &-img{
     width: 100%;
   }
@@ -27,24 +37,25 @@
     color: var(--color-black);
     border-radius: 5px;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 12px;
+    right: 12px;
     font-family: 'WantedSans', sans-serif;
   }
   &-title{
     font-family: 'GongGothicMedium';
     font-weight: 300;
     margin: 0.5rem 0;
+    
   }
   &-price{
-    color: var((--color-primary));
+    color: var(--color-primary);
     font-weight: 500;
     margin: 0.5rem 0;
   }
   &-add{
     @include btn-style(var(--color-Secondary));
     &:hover{
-      filter: brightness(80%);
+      filter: brightness(85%);
     }
   }
   .card-img{
